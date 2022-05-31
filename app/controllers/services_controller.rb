@@ -12,9 +12,9 @@ class ServicesController < ApplicationController
 
     @markers = @services.geocoded.map do |service|
       {
-        lat: barbecue.latitude,
-        lng: barbecue.longitude,
-        info_window: render_to_string(partial: "info_window", locals: { barbecue: barbecue }),
+        lat: service.latitude,
+        lng: service.longitude,
+        info_window: render_to_string(partial: "info_window", locals: { service: service }),
         image_url: helpers.asset_url("")
       }
     end
