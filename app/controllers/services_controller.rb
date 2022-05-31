@@ -1,6 +1,6 @@
 class ServicesController < ApplicationController
   before_action :set_service, only: [:show, :edit, :update, :destroy]
-  skip_before_action :authenticate_user!, only: :index
+  #skip_before_action :authenticate_user!, only: :index
 
   def index
     @services = Service.all
@@ -10,27 +10,27 @@ class ServicesController < ApplicationController
       @services = Service.where(title: @title)
     end
 
-    @markers = @services.geocoded.map do |service|
-      {
-        lat: service.latitude,
-        lng: service.longitude,
-        info_window: render_to_string(partial: "info_window", locals: { service: service }),
-        image_url: helpers.asset_url("")
-      }
-    end
+    # @markers = @services.geocoded.map do |service|
+    #   {
+    #     lat: service.latitude,
+    #     lng: service.longitude,
+    #     info_window: render_to_string(partial: "info_window", locals: { service: service }),
+    #     image_url: helpers.asset_url("")
+    #   }
+    # end
   end
 
-  def show
-    @markers = [
-      {
-        lat: @service.latitude,
-        lng: @service.longitude,
-        info_window: render_to_string(partial: "info_window", locals: { service: @service }),
-        image_url: helpers.asset_url("")
-      }
-    ]
+  # def show
+  #   @markers = [
+  #     {
+  #       lat: @service.latitude,
+  #       lng: @service.longitude,
+  #       info_window: render_to_string(partial: "info_window", locals: { service: @service }),
+  #       image_url: helpers.asset_url("")
+  #     }
+  #   ]
 
-  end
+  # end
 
   def new
     @service = Service.new
