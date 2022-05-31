@@ -1,0 +1,16 @@
+<div class="row d-flex justify-content-center">
+  <div class="col-4">
+    <div class="flat-form2">
+      <%= simple_form_for [@service, @booking] do |f| %>
+
+        <div class="flat-form2">
+        <%= f.label :Date %>
+        <%= f.input :date, label: false, placeholder: "Date", :input_html => { class: "form-nice-class" } %>
+        <%= f.label :Duration %>
+        <%= f.input :duration, label: false, placeholder: "Duration", :input_html => { class: "form-nice-class" } %>
+        </div>
+        
+      <% end %>
+    </div>
+  </div>
+</div>
