@@ -2,16 +2,14 @@
   <div class="col-4">
     <div class="flat-form2">
       <%= simple_form_for [@service, @booking] do |f| %>
-       <div class="flat-form2">
-       <%= f.label :Date_in %>
-        <%= f.input :date_in, label: false, placeholder: "Date in", :input_html => { class: "form-nice-class" } %>
+
+        <div class="flat-form2">
+        <%= f.label :Date %>
+        <%= f.input :date, label: false, placeholder: "Date", :input_html => { class: "form-nice-class" } %>
+        <%= f.label :Duration %>
+        <%= f.input :duration, label: false, placeholder: "Duration", :input_html => { class: "form-nice-class" } %>
         </div>
-         <div class="flat-form2">
-         <%= f.label :Date_out %>
-        <%= f.input :date_out, label: false, placeholder: "Date out", :input_html => { class: "form-nice-class" } %>
-         <div class="flat-form2">
-        <%= f.submit 'Book the service', class: 'btn btn-success btn-block w-100 p-2' %>
-        </div>
+        
       <% end %>
     </div>
   </div>
