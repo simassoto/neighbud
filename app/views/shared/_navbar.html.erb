@@ -1,7 +1,8 @@
+
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon fixed-top">
   <div class="container-fluid">
     <%= link_to root_path, class: "navbar-brand" do %>
-      <%= image_tag "Logo Neighbuddies full.png" %>
+      <%= image_tag "" %>
     <% end %>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -11,17 +12,17 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
-          <li class="nav-item active">
+          <!-- <li class="nav-item active">
             <%= link_to "Home", "#", class: "nav-link" %>
-          </li>
+          </li> 
           <li class="nav-item">
             <%= link_to "Messages", "#", class: "nav-link" %>
-          </li>
+          </li> -->
           <li class="nav-item dropdown">
             <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <%= link_to "Action", "#", class: "dropdown-item" %>
-              <%= link_to "Another action", "#", class: "dropdown-item" %>
+              <!-- <%= link_to "Action", "#", class: "dropdown-item" %>
+              <%= link_to "Another action", "#", class: "dropdown-item" %> -->
               <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
             </div>
           </li>
@@ -34,3 +35,38 @@
     </div>
   </div>
 </div>
+
+
+<!-- SIDE BAR -->
+
+<input type="checkbox" id="navcheck" role="button" title="menu">
+<label for="navcheck" aria-hidden="true" title="menu">
+	<span class="burger mt-5">
+		<span class="bar">
+			<span class="visuallyhidden">Menu</span>
+		</span>
+	</span>
+</label>
+<nav id="menu">
+	<a href="#" class="fa fa-home" aria-hidden="true"> Home </a>
+	<a href="#" class="fa fa-user" aria-hidden="true"> My Profile</a>
+	<a href="#" class="fa fa-bookmark" aria-hidden="true"> My Dashboard</a>
+	<a href="#" class="fa fa-plus-square" aria-hidden="true"> Add Service</a>
+</nav>
+<main>
+<!--	<article class="content">
+			<h1>UI with UX improvement with only awesome CSS</h1>
+		<p><strong>Burger icon, animated nav background and off-trigger area (outside nav opened) made width pseudo-elements. No JS at all :)</strong></p>
+		<p><strong>No repaint, no reflow, no JS, but the blur effect may be a little laggy, particularly on mobile devices.</strong></p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum asperiores, minima obcaecati ex iusto alias minus excepturi sunt! Asperiores quibusdam iure numquam quis dicta at quisquam debitis minima perspiciatis modi?</p>
+		<p>Asperiores impedit neque porro, minus cum. Nesciunt blanditiis, dolorum explicabo esse voluptates voluptas doloribus, vero voluptate veniam impedit nam doloremque unde inventore ipsum iste magnam perferendis assumenda in sunt deleniti.</p>
+		<p>Cum quidem eum quos provident placeat aut tempore rem voluptates eveniet? Eos impedit aspernatur hic tenetur ipsum tempora exercitationem libero voluptas numquam necessitatibus. Error quisquam quaerat debitis suscipit velit dolore.</p>
+		<p>Atque, ab libero! Cum quae cumque voluptate culpa accusantium iste aliquam illum quos facere quisquam, delectus, magnam neque dicta quibusdam libero itaque dolorem, tenetur vel dolores laudantium ratione asperiores voluptatibus.</p>
+		<p>Fugiat praesentium omnis maiores atque sed perspiciatis quia laboriosam! Eius mollitia iusto quia libero, voluptate laborum labore ducimus beatae, quisquam, dicta laboriosam culpa voluptatem impedit maxime, a ex pariatur dignissimos.</p>
+		<p>Dolores odio dolore quo? Autem iure dolorem ratione, odit reiciendis. Non pariatur voluptates, explicabo vitae, rem molestias in. Voluptates expedita iusto blanditiis commodi numquam. Hic atque natus dolore cupiditate velit.</p>
+		<p>Ipsam ipsum quos, quibusdam nulla commodi dolorem impedit soluta odio natus. Ullam dolor consequatur tenetur similique cupiditate debitis natus tempore molestiae quo, inventore in quia earum explicabo eaque qui facilis.</p>
+		<p>Iure, natus. Ipsam officia nostrum minima ut blanditiis asperiores neque esse itaque reprehenderit, et, porro ea nemo eligendi cum soluta fuga similique? Soluta, nam odio praesentium quas officia repellendus dicta.</p>
+		<p>Modi voluptates, doloremque aliquam. Magnam numquam fugit aliquam veniam officiis iusto et assumenda cupiditate aspernatur voluptas expedita quo voluptatibus repudiandae, sapiente molestias, culpa eos placeat possimus quae! Aliquid dicta, atque?</p>
+		<p>Laborum magni ipsam iure iste blanditiis saepe. Optio obcaecati quaerat soluta, vitae. Asperiores reiciendis minima, quidem iusto explicabo culpa quaerat atque! Cum nesciunt nam ducimus mollitia iste sapiente sit, eos.</p>
+	</article> -->
+</main>
