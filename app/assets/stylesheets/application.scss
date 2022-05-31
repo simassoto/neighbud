@@ -11,3 +11,15 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+
+body {
+    background-image: url("bannerweb.png");
+    position: relative;
+    height: 50vh;
+    background-position: top;
+    background-size: cover;
+    color: #fff;
+    background-repeat: no-repeat;
+    justify-content: center;
+}
