@@ -1,0 +1,20 @@
+.banner-container{
+    position: relative;
+    background-image: url("banner.png");
+    height: 70vh;
+    background-position:right;
+    background-size:contain;
+    color: #fff;
+    background-repeat: no-repeat;
+    justify-content: center;
+
+
+    .banner-title{
+        margin: 0;
+        font-size: 60px;
+        font-weight: 700;
+        text-align: center;
+        padding-top: 200px;
+        color: purple;
+      }
+}
