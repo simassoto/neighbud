@@ -23,17 +23,14 @@
   <div id="sidebarMenu">
     <ul class="sidebarMenuInner">
       <li>Neighbud <span>MENU</span></li>
-      <li><a href="https://vanila.io" target="_blank"> Home</a></li>
-      <li><a href="https://instagram.com/plavookac" target="_blank">My Profile</a></li>
-      <li><a href="https://twitter.com/plavookac" target="_blank">My Dashboard</a></li>
       <li><a><%= link_to "home", root_path %></a></li>
-      <li><a><%= link_to "My Profile", new_service_path %></a></li>
-      <li><a><%= link_to "Add Service", new_service_path %></a></li>
+      <li><a><%= link_to "My Profile", edit_user_registration_path(current_user) %></a></li>
+      <li><a><%= link_to "My Dashboard", root_path %></a></li>
       <li><a><%= link_to "Add Service", new_service_path %></a></li>
 
       <% if user_signed_in? %>
       <li class="nav-item dropdown">
-        <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+        <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %><a> RODRIGO<%= current_user.first_name %></a>
         <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
           <!-- <%= link_to "Action", "#", class: "dropdown-item" %>
           <%= link_to "Another action", "#", class: "dropdown-item" %> -->
