@@ -1,1 +1,16 @@
-<p> TESTE NEW SERVICES </p>
+<div class="row justify-content-center d-flex justify-content-around align-self-center p-1">
+  <div class="col-4">
+    <h4>Add a new service!</h4>
+  </div>
+</div>
+
+<div class="row justify-content-center d-flex justify-content-around align-self-center">
+  <%= render 'form', service: @service %>
+</div>
+
+<div class="row justify-content-center p-2">
+  <div class="col-4  d-flex justify-content-between align-self-center p-1">
+    <%=  link_to 'Click to see the service', @service, class: 'btn btn-outline-dark btn-block w-40 btn-sm'%>
+    <%= link_to 'Back', :back, class: 'btn btn-outline-dark btn-block w-40 btn-sm'%>
+  </div>
+</div>
