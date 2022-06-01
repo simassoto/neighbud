@@ -4,8 +4,42 @@
   </div>
 </div>
 
-<div class="row justify-content-center d-flex justify-content-around align-self-center">
-  <%= render 'form', service: @service %>
+<div class="row d-flex justify-content-center">
+  <div class="col-4">
+    <div class="flat-form2">
+      <%= simple_form_for(service) do |f| %>
+
+        <div class="flat-form2">
+          <%= f.label :Title %>
+          <%= f.input :title, label: false, placeholder: "What is the service?", :input_html => { class: "form-nice-class" } %>
+        </div>
+
+        <div class="flat-form2">
+          <%= f.label :Description %>
+          <%= f.input :description, label: false, placeholder: "Type a short and objective description", :input_html => { class: "form-nice-class" } %>
+        </div>
+
+        <div class="flat-form2">
+          <%= f.label :Category %>
+          <%= f.input :category, as: :string , label: false, placeholder: "What is the category of the service?", :input_html => { class: "form-nice-class" } %>
+        </div>
+
+        <div class="flat-form2">
+          <%= f.label :Address %>
+          <%= f.input :address, label: false, placeholder: "Type in the adress", :input_html => { class: "form-nice-class" } %>
+        </div>
+
+        <div class="flat-form2">
+          <%= f.label :Price %>
+          <%= f.input :price, label: false, placeholder: "How many NeighBuds Coins for that?", :input_html => { class: "form-nice-class" } %>
+        </div>
+
+        <div class="flat-form2">
+          <%= f.submit 'Add a service', class: 'btn btn-success btn-block w-100 p-2' %>
+        </div>
+      <% end %>
+    </div>
+  </div>
 </div>
 
 <div class="row justify-content-center p-2">
