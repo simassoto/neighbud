@@ -3,19 +3,17 @@
 
 <div class="header">
 
+
+
 <!-- SEARCH BAR -->
 
-      <div class="container">
-      <%= form_tag services_path, method: :get do %>
-        <%= text_field_tag :query,
-          params[:query],
-          class: "form-control",
-          placeholder: "Find a service"
-        %>
-        <%= submit_tag "Search", class: "btn btn-primary" %>
-      <% end %>
-      </div>
+  <div class="containersb mt-2">
+    <%= form_tag services_path, method: :get do %>
+      <%= text_field_tag :query, params[:query], placeholder: "Find a service" %>
+      <%= submit_tag "Search", class: "btn btn-primary" %>
+    <% end %>
   </div>
+</div>
 
 <!-- SEARCH BAR -->
 
