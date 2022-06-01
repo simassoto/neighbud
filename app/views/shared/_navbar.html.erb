@@ -25,7 +25,7 @@
       <li>Neighbud <span>MENU</span></li>
       <li><a><%= link_to "home", root_path %></a></li>
       <li><a><%= link_to "My Profile", edit_user_registration_path(current_user) %></a></li>
-      <li><a><%= link_to "My Dashboard", root_path %></a></li>
+      <li><a><%= link_to "My Dashboard", dashboard_path %></a></li>
       <li><a><%= link_to "Add Service", new_service_path %></a></li>
 
       <% if user_signed_in? %>
