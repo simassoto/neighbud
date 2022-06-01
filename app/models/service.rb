@@ -2,11 +2,10 @@ class Service < ApplicationRecord
   belongs_to :user
   has_many :booking
 
-  validates :title
-  validates :description
-  validates :category
-  validates :address
-  validates :price
-
+  validates :title, presence: true
+  validates :description, presence: true
+  validates :category, presence: true
+  validates :address, presence: true
+  validates :price, presence: true
 
 end
