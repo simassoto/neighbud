@@ -1,8 +1,5 @@
 
 
- <!-- SIDE BAR -->
-
-
 
 <div class="header">
 
@@ -29,7 +26,10 @@
       <li><a href="https://vanila.io" target="_blank"> Home</a></li>
       <li><a href="https://instagram.com/plavookac" target="_blank">My Profile</a></li>
       <li><a href="https://twitter.com/plavookac" target="_blank">My Dashboard</a></li>
-      <li><a href="https://www.youtube.com/channel/UCDfZM0IK6RBgud8HYGFXAJg" target="_blank">Add Service</a></li>
+      <li><a><%= link_to "home", root_path %></a></li>
+      <li><a><%= link_to "My Profile", new_service_path %></a></li>
+      <li><a><%= link_to "Add Service", new_service_path %></a></li>
+      <li><a><%= link_to "Add Service", new_service_path %></a></li>
 
       <% if user_signed_in? %>
       <li class="nav-item dropdown">

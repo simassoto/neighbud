@@ -1,5 +1,5 @@
-<div class="row justify-content-center d-flex justify-content-around align-self-center p-1">
-  <div class="col-4">
+<div class="row justify-content-center d-flex justify-content-around align-self-center p-1 mt-5">
+  <div class="col-4 mt-5">
     <h4>Add a new service!</h4>
   </div>
 </div>
@@ -7,7 +7,7 @@
 <div class="row d-flex justify-content-center">
   <div class="col-4">
     <div class="flat-form2">
-      <%= simple_form_for(service) do |f| %>
+      <%= simple_form_for(@service) do |f| %>
 
         <div class="flat-form2">
           <%= f.label :Title %>
