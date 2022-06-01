@@ -1,16 +1,14 @@
-<div class="row d-flex justify-content-center">
+<div class="row d-flex justify-content-center pt-5">
   <div class="col-4">
-    <div class="flat-form2">
+    <div class="flat-form2" data-controller="flatpickr">
       <%= simple_form_for [@service, @booking] do |f| %>
-
         <div class="flat-form2">
-        <%= f.label :Date %>
-        <%= f.input :date, label: false, placeholder: "Date", :input_html => { class: "form-nice-class" } %>
-        <%= f.label :Duration %>
-        <%= f.input :duration, label: false, placeholder: "Duration", :input_html => { class: "form-nice-class" } %>
-         <%= f.submit "Submit the booking" %>
+          <%= f.label "Set the date you need this service to be done" %>
+          <%= f.input :date, label: false, placeholder: "Date", as: :string, required: false, input_html: {class: "form-nice-class datepicker"} %>
+          <%= f.label "Duration in hours" %>
+          <%= f.input :duration, label: false, placeholder: "Duration", :input_html => { class: "form-nice-class", min: '1', value: "1" }  %>
+          <%= f.submit "Submit the booking" %>
         </div>
-
       <% end %>
     </div>
   </div>
