@@ -1,7 +1,7 @@
 class ServicesController < ApplicationController
   before_action :set_service, only: [:show, :edit, :update, :destroy]
   #skip_before_action :authenticate_user!, only: :index
-  authorize @service
+  #authorize @service
 
   def index
     @services = Service.all
