@@ -4,12 +4,15 @@ class ServicesController < ApplicationController
   #authorize @service
 
   def index
-    @services = Service.all
-    @search = params["search"]
-    if @search.present?
-      @title = @search["title"]
-      @services = Service.where(title: @title)
+
+
+    if params[:query].present?
+      sql_query = "title ILIKE :query OR description ILIKE :query"
+      @services = Service.where(sql_query, query: "%#{params[:query]}%")
+    else
+      @services = Service.all
     end
+
 
     # @markers = @services.geocoded.map do |service|
     #   {

@@ -24,16 +24,114 @@
   align-items: center;
   justify-content: center;
   background: #ffffff;
-  border: .75em solid white;
-  padding: 2em;
+
+ 
   font-family: 'Open Sans', sans-serif;
 }
 
 .data-card {
   display: flex;
   flex-direction: column;
-  width: 10.75em;
-  height: 10.75em;
+  width: 10.50em;
+  height: 10.50em;
+  overflow: hidden;
+  border-radius: .5em;
+  text-decoration: none;
+  background: rgb(255, 255, 255);
+  margin: 1em;
+  padding: 2.75em 2.5em;
+  box-shadow: 0 1.5em 2.5em -.5em rgba(#000000, .1);
+  transition: transform .45s ease, background .45s ease;
+  
+  h4 {
+    color: #2E3C40;
+    font-size: 1.5em;
+    font-weight: 600;
+    line-height: 1;
+    padding-bottom: .5em;
+    margin: 0 0 0.142857143em;
+    border-bottom: 2px solid #511B75;
+    transition: color .45s ease, border .45s ease;
+  }
+
+  h5 {
+    color: #627084;
+    text-transform: uppercase;
+    font-size: 0.7em;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0.1em;
+    margin: 0 0 1.777777778em;
+    transition: color .45s ease;
+  }
+
+  p {
+    opacity: 0;
+    color: #FFFFFF;
+    font-weight: 600;
+    line-height: 1.8;
+    margin: 0 0 1.25em;
+    transform: translateY(-1em);
+    transition: opacity .45s ease, transform .5s ease;
+  }
+
+  .link-text {
+    display: block;
+    color: #511B75;
+    font-size: 1.125em;
+    font-weight: 600;
+    line-height: 1.2;
+    margin: auto 0 0;
+    transition: color .45s ease;
+
+    svg {
+      margin-left: .5em;
+      transition: transform .6s ease;
+      
+      path {
+        transition: fill .45s ease;
+      }
+    }
+  }
+  
+  &:hover {
+    background: #511B75;
+    transform: scale(1.02);
+    
+    h3 {
+      color: #FFFFFF;
+      border-bottom-color: #A754C4;
+    }
+
+    h4 {
+      color: #FFFFFF;
+    }
+
+    p {
+      opacity: 1;
+      transform: none;
+    }
+
+    .link-text {
+      color: #FFFFFF;
+
+      svg {
+        animation: point 1.25s infinite alternate;
+        
+        path {
+          fill: #FFFFFF;
+        }
+      }
+    }
+  }
+}
+
+
+.data-card2 {
+  display: flex;
+  flex-direction: column;
+  width: 40.50em;
+  height: 30.50em;
   overflow: hidden;
   border-radius: .5em;
   text-decoration: none;
@@ -95,12 +193,13 @@
   }
   
   &:hover {
-    background: #753BBD;
+    background: #fefcff;
+    color: #511B75;
     transform: scale(1.02);
     
     h3 {
       color: #FFFFFF;
-      border-bottom-color: #A754C4;
+      border-bottom-color: #511B75;
     }
 
     h4 {
@@ -125,6 +224,12 @@
     }
   }
 }
+
+
+
+
+
+
 
 @keyframes point {
   0% {
@@ -156,7 +261,7 @@ body {
     width: 100%;
     max-width: 100%;
     box-shadow: none;
-    background-color: #3B1456;
+    background-color: #511B75;
     position: fixed;
     height: 60px!important;
     overflow: hidden;
@@ -189,7 +294,7 @@ body {
     margin-top: 60px;
     transform: translateX(-250px);
     transition: transform 250ms ease-in-out;
-    background: linear-gradient(180deg, #3B1456 0%, #7d62f8 100%);
+    background: linear-gradient(180deg, #511B75 0%, #7d62f8 100%);
 }
 .sidebarMenuInner{
     margin:0;
@@ -297,7 +402,7 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
 
 .searchbar {
     float: right;
-    background-color: #3B1456;
+    background-color: #511B75;
     color: white;
     padding: 6px 10px;
     width: 120px;

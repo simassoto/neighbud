@@ -5,16 +5,22 @@
 
 <!-- SEARCH BAR -->
 
-  <div class="container">
-          <input id="searchBar" class="searchbar" type="text" placeholder="Search...">
-          <a id="btnSearch" class="btn-search"><i class="fa fa-search"></i></a>
+      <div class="container">
+      <%= form_tag services_path, method: :get do %>
+        <%= text_field_tag :query,
+          params[:query],
+          class: "form-control",
+          placeholder: "Find a service"
+        %>
+        <%= submit_tag "Search", class: "btn btn-primary" %>
+      <% end %>
       </div>
   </div>
 
 <!-- SEARCH BAR -->
 
-  <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">  
-  <label for="openSidebarMenu" class="sidebarIconToggle">  
+  <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+  <label for="openSidebarMenu" class="sidebarIconToggle">
     <div class="spinner diagonal part-1"></div>
     <div class="spinner horizontal"></div>
     <div class="spinner diagonal part-2"></div>
@@ -23,17 +29,14 @@
   <div id="sidebarMenu">
     <ul class="sidebarMenuInner">
       <li>Neighbud <span>MENU</span></li>
-      <li><a href="https://vanila.io" target="_blank"> Home</a></li>
-      <li><a href="https://instagram.com/plavookac" target="_blank">My Profile</a></li>
-      <li><a href="https://twitter.com/plavookac" target="_blank">My Dashboard</a></li>
       <li><a><%= link_to "home", root_path %></a></li>
-      <li><a><%= link_to "My Profile", new_service_path %></a></li>
-      <li><a><%= link_to "Add Service", new_service_path %></a></li>
+      <li><a><%= link_to "My Profile", edit_user_registration_path(current_user) %></a></li>
+      <li><a><%= link_to "My Dashboard", dashboard_path %></a></li>
       <li><a><%= link_to "Add Service", new_service_path %></a></li>
 
       <% if user_signed_in? %>
       <li class="nav-item dropdown">
-        <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+        <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %><a> RODRIGO<%= current_user.first_name %></a>
         <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
           <!-- <%= link_to "Action", "#", class: "dropdown-item" %>
           <%= link_to "Another action", "#", class: "dropdown-item" %> -->
@@ -48,4 +51,3 @@
 
     </ul>
   </div>
- 
