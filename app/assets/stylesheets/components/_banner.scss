@@ -1,9 +1,10 @@
 .banner-container{
     position: relative;
-    background-image: url("banner.png");
-    height: 70vh;
-    background-position:right;
-    background-size:contain;
+    background: linear-gradient(180deg, #3B1456 20%, #7d62f8 80%, #ffffff 100%);
+    border-bottom-left-radius: 180px;
+    height: 60vh;
+    background-position:center;
+    background-size:cover;
     color: #fff;
     background-repeat: no-repeat;
     justify-content: center;
