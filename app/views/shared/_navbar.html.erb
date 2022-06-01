@@ -5,16 +5,22 @@
 
 <!-- SEARCH BAR -->
 
-  <div class="container">
-          <input id="searchBar" class="searchbar" type="text" placeholder="Search...">
-          <a id="btnSearch" class="btn-search"><i class="fa fa-search"></i></a>
+      <div class="container">
+      <%= form_tag services_path, method: :get do %>
+        <%= text_field_tag :query,
+          params[:query],
+          class: "form-control",
+          placeholder: "Find a service"
+        %>
+        <%= submit_tag "Search", class: "btn btn-primary" %>
+      <% end %>
       </div>
   </div>
 
 <!-- SEARCH BAR -->
 
-  <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">  
-  <label for="openSidebarMenu" class="sidebarIconToggle">  
+  <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+  <label for="openSidebarMenu" class="sidebarIconToggle">
     <div class="spinner diagonal part-1"></div>
     <div class="spinner horizontal"></div>
     <div class="spinner diagonal part-2"></div>
@@ -45,4 +51,3 @@
 
     </ul>
   </div>
- 
