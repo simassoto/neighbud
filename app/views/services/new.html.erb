@@ -21,7 +21,7 @@
 
         <div class="flat-form2">
           <%= f.label :Category %>
-          <%= f.input :category, as: :string , label: false, placeholder: "What is the category of the service?", :input_html => { class: "form-nice-class" } %>
+          <%= f.input :category, label: false, include_blank: true, prompt: 'Click to select', collection: ['Education', 'Sport', 'Reparing', 'Social Care', 'Health Care', 'Financial', 'Maintenance', 'Entertainment', 'Food', 'Others'], label: false, :input_html => { class: "form-nice-class"} %>
         </div>
 
         <div class="flat-form2">
@@ -31,7 +31,7 @@
 
         <div class="flat-form2">
           <%= f.label :Price %>
-          <%= f.input :price, label: false, placeholder: "How many NeighBuds Coins for that?", :input_html => { class: "form-nice-class" } %>
+          <%= f.input :price, label: false, placeholder: "How many NeighBuds Coins for that?", :input_html => { class: "form-nice-class", min: '1', value: "1" }  %>
         </div>
 
         <div class="flat-form2">
