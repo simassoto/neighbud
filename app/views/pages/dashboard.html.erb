@@ -95,30 +95,35 @@
         <th>Request</th>
 
 
-  <tbody>
-    <% @booked.each do |booking| %>
-      <tr>
-        <td>
-          <div class="d-flex align-items-center">
-            <img
-                src="https://mdbootstrap.com/img/new/avatars/8.jpg"
-                alt=""
-                style="width: 45px; height: 45px"
-                class="rounded-circle"
-                />
-            <div class="ms-3">
-              <p class="fw-bold mb-1"><%= booking.service.title %></p>
-              <p class="text-muted mb-0"><%= booking.service.price %></p>
-            </div>
-          </div>
-        </td>
-          <button type="button" class="btn btn-link btn-sm btn-rounded">
-            Confirm
-          </button>
-        </td>
+            <tbody>
+              <% @booked.each do |booking| %>
+                <tr>
+                  <td>
+                    <div class="d-flex align-items-center">
+                      <img
+                          src="https://mdbootstrap.com/img/new/avatars/8.jpg"
+                          alt=""
+                          style="width: 45px; height: 45px"
+                          class="rounded-circle"
+                          />
+                      
+                      <div class="ms-3">
+                        <p class="fw-bold mb-1"><%= booking.service.title %></p>
+                        <p class="text-muted mb-0"><%= booking.service.price %></p>
+                      </div>
 
-      </tr>
-    </thead>
+                    </div>
+
+                  </td>
+                    <button type="button" class="btn btn-link btn-sm btn-rounded">
+                      Confirm
+                    </button>
+                  </td>
+
+                </tr>
+      </thead>
+              <% end %>
+            </tbody>
 
     <tbody>
       <% @user.services.each do |service| %>
