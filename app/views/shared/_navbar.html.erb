@@ -12,14 +12,14 @@
     </button>
 
 <!-- searchbar -->
-      <div class="search-form-control form-group">
-        <%= form_tag services_path, method: :get do %>
-        <input class="form-control string required" <%= text_field_tag :query, params[:query], placeholder: "Find a service" %>>
-        <button class="btn btn-flat" <%= submit_tag "Search", class: "btn btn-primary" %>>
-          <i class="fas fa-search"></i> Search
-        </button>
-        <% end %>
-      </div>
+      <div class="search-form-control form-group d-block p-2 ">
+          <%= form_tag services_path, method: :get do %>
+          <%= text_field_tag :query, params[:query], class: "form-control string required" %>
+          <%= button_tag(type: "submit", class: "btn btn-default") do %>
+             <i class="fa-solid fa-magnifying-glass"></i>
+          <% end %>
+          <% end %>
+        </div>
 <!-- searchbar -->
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -54,4 +54,3 @@
     </div>
   </div>
 </div>
-

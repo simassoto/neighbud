@@ -2,18 +2,17 @@
 
 
 .card-category {
-  background-size: cover;
-  background-position: center;
+background-color: rgb(121, 92, 121);
   width: 100px;
   height: 100px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items:flex-end;
   color: white;
   font-size: 16px;
   font-weight: bold;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  border-radius: 50%;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+  border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   padding: 15px;
   margin: 10px;
