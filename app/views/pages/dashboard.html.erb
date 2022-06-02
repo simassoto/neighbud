@@ -14,12 +14,18 @@
       </thead>
     </table>
 
-<div class="container">    
+<div class="container">
   <div class="row mt-3">
-    <% @user.services.each do |service| %>
-      <div class="col-2 mb-4 ms-5">
-          <div class="card cardmove">
-          <div class= "p-3"> <img
+
+
+    <% @user.bookings.each do |booking| %>
+      <div class="col-xl-6 mb-4">
+          <div class="card">
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center">
+                  <img
+
                     src="https://mdbootstrap.com/img/new/avatars/8.jpg"
                     alt=""
                     style="width: 45px; height: 45px, position: absolute;"
@@ -32,8 +38,10 @@
                 <div class="d-flex align-items-center">
                   
                   <div class="ms-3">
-                    <p class="fw-bold mb-1"><%= service.title %></p>
-                    <p class="text-muted mb-0"><%= service.description %></p>
+                    <p class="fw-bold mb-1"><%= booking.date %></p>
+                    <p class="text-muted mb-0"><%= booking.service_id %></p>
+                    <p class="text-muted mb-0"><%= booking.duration %></p>
+                    <p class="text-muted mb-0"><%= booking.final_price %></p>
                   </div>
                 </div>
                 <span class="badge rounded-pill badge-success">Active</span>
@@ -69,11 +77,12 @@
 
 
 
- <!-- My Services was booked Container -->
+ <!-- My Services were booked Container -->
 
 <div class="container p-3 mt-5 bg-light border rounded">
 
   <h3 class= "fw-bold border-bottom main-title">My Schedule</h3>
+
 
 
   <table class="table align-middle mt-3 bg-white main-title">
@@ -84,6 +93,30 @@
         <th>Category</th>
         <th>My Price</th>
         <th>Request</th>
+
+
+  <tbody>
+    <% @booked.each do |booking| %>
+      <tr>
+        <td>
+          <div class="d-flex align-items-center">
+            <img
+                src="https://mdbootstrap.com/img/new/avatars/8.jpg"
+                alt=""
+                style="width: 45px; height: 45px"
+                class="rounded-circle"
+                />
+            <div class="ms-3">
+              <p class="fw-bold mb-1"><%= booking.service.title %></p>
+              <p class="text-muted mb-0"><%= booking.service.price %></p>
+            </div>
+          </div>
+        </td>
+          <button type="button" class="btn btn-link btn-sm btn-rounded">
+            Confirm
+          </button>
+        </td>
+
       </tr>
     </thead>
 
@@ -124,5 +157,3 @@
     </tbody>
   </table>
 </div>
-
-

@@ -3,27 +3,33 @@
 
 .card-category2 {
   position: relative;
-  background-color: #7e2bb6;
+  background-image: linear-gradient(to bottom right, rgba(126, 43, 182,0.7), rgba(126, 43, 182,1));
   height: 100px;
   padding: 50px;
   margin: 10px;
-  color: white;
-  border-radius: 5px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  font-family: 'Anek Latin', sans-serif;
-  font-weight: 100;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
-  font-size: 16px;
+  border-radius: 15px;
+  box-shadow: 2px 2px 3px rgba(0,0,0,0.4);
 }
+
+.grow {
+  transition: all .1s ease-in-out;
+  }
+
+  .grow:hover {
+  transform: scale(1.1);
+  }
 
 .card-icon2 {
   font-size: 2.3em;
-
+  padding-bottom: 15px;
 }
 
 .text-middle2 {
   position: absolute;
   bottom: 10px;
-  font-weight: 100;
-
+  font-family: 'Anek Latin', sans-serif;
+  font-weight: 300;
+  text-shadow: 2px 2px 3px rgba(0,0,0,0.4);
+  font-size: 16px;
+  color: white;
 }
