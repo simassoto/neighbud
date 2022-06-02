@@ -1,15 +1,22 @@
-<h1 class="p-3 text-center fw-bold">My Dashboard</h1>
+<h1 class="p-3 text-center fw-bold main-title">My Dashboard</h1>
 
    <!-- My bookings Container -->
 
 <div class="container p-3 mt-3 bg-light border rounded">
 
-  <h3 class= "fw-bold border-bottom">My Bookings</h3>
+  <h3 class= "fw-bold border-bottom main-title">My Bookings</h3>
 
-
+    <table class="table align-middle mt-3 bg-white main-title border-top: 2px solid currentColor;">
+      <thead class="table-header text-light">
+      <tr>
+        <th>Bookings</th>
+      </tr>
+      </thead>
+    </table>
 
 <div class="container">
   <div class="row mt-3">
+
 
     <% @user.bookings.each do |booking| %>
       <div class="col-xl-6 mb-4">
@@ -18,11 +25,18 @@
               <div class="d-flex justify-content-between align-items-center">
                 <div class="d-flex align-items-center">
                   <img
+
                     src="https://mdbootstrap.com/img/new/avatars/8.jpg"
                     alt=""
-                    style="width: 45px; height: 45px"
-                    class="rounded-circle"
+                    style="width: 45px; height: 45px, position: absolute;"
+                    class="rounded-circle align-items-center"
                   />
+          </div>
+            <div class="card-body main-title">
+            
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center">
+                  
                   <div class="ms-3">
                     <p class="fw-bold mb-1"><%= booking.date %></p>
                     <p class="text-muted mb-0"><%= booking.service_id %></p>
@@ -34,17 +48,17 @@
               </div>
             </div>
             <div
-              class="card-footer border-0 bg-light p-2 d-flex justify-content-around"
+              class="card-footer border-0 bg-light p-2 d-flex justify-content-left"
             >
               <a
-                class="btn btn-link m-0 text-reset"
+                class="btn btn-link m-0 text-reset ms-4 main-title"
                 href="#"
                 role="button"
                 data-ripple-color="primary"
-                >Edit<i class="fas fa-edit ms-2 text-decoration-none"></i
+                >Edit<i class="fas fa-edit ms-2"></i
               ></a>
               <a
-                class="btn btn-link m-0 text-reset"
+                class="btn btn-link ms-0 text-reset ms-4 main-title"
                 href="#"
                 role="button"
                 data-ripple-color="primary"
@@ -67,16 +81,19 @@
 
 <div class="container p-3 mt-5 bg-light border rounded">
 
-  <h3 class= "fw-bold border-bottom">My Schedule</h3>
+  <h3 class= "fw-bold border-bottom main-title">My Schedule</h3>
 
 
-<table class="table align-middle mt-3 bg-white">
-  <thead class="table-header text-light">
-    <tr>
-      <th>Title Service</th>
-      <th>Price</th>
-    </tr>
-  </thead>
+
+  <table class="table align-middle mt-3 bg-white main-title">
+    <thead class="table-header text-light">
+      <tr>
+        <th>Name Client</th>
+        <th>Title Service</th>
+        <th>Category</th>
+        <th>My Price</th>
+        <th>Request</th>
+
 
   <tbody>
     <% @booked.each do |booking| %>
@@ -99,8 +116,44 @@
             Confirm
           </button>
         </td>
+
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
+
+    <tbody>
+      <% @user.services.each do |service| %>
+        <tr>
+          <td>
+            <div class="d-flex align-items-center">
+              <img
+                  src="https://mdbootstrap.com/img/new/avatars/8.jpg"
+                  alt=""
+                  style="width: 45px; height: 45px"
+                  class="rounded-circle"
+                  />
+              <div class="ms-3">
+                <p class="fw-bold mb-1"><%= service.title %></p>
+                <p class="text-muted mb-0"><%= service.title %></p>
+              </div>
+            </div>
+          </td>
+          <td>
+            <p class="fw-normal mb-1"><%= service.title %></p>
+            <p class="text-muted mb-0"><%= service.category %></p>
+          </td>
+          <td>
+            <p class="text-muted mb-0"><%= service.category %></p>
+          </td>
+          <td>
+            <p class="text-muted mb-0 ps-3">€ <%= service.price %></p>
+          </td>
+          <td>
+            <button type="button" class="btn btn-link btn-sm btn-rounded">
+              Confirm
+            </button>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 </div>

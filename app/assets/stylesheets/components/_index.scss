@@ -7,6 +7,7 @@
 @import "footer";
 @import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
 
+@import "movecard";
 @import "cards";
 @import "cards2";
 @import "searchbar";
@@ -14,6 +15,12 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Anek+Latin:wght@100;200;300;400;500&display=swap');
 @import "landing_page_banner";
+
+
+.main-title{
+  font-family: Anek Latin;
+}
+
 
 @import "bootstrap/scss/functions";
 @import "bootstrap/scss/variables";
