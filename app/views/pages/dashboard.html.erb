@@ -8,10 +8,10 @@
 
 
 
-<div class="container">    
+<div class="container">
   <div class="row mt-3">
 
-    <% @user.services.each do |service| %>
+    <% @user.bookings.each do |booking| %>
       <div class="col-xl-6 mb-4">
           <div class="card">
             <div class="card-body">
@@ -24,8 +24,10 @@
                     class="rounded-circle"
                   />
                   <div class="ms-3">
-                    <p class="fw-bold mb-1"><%= service.title %></p>
-                    <p class="text-muted mb-0"><%= service.description %></p>
+                    <p class="fw-bold mb-1"><%= booking.date %></p>
+                    <p class="text-muted mb-0"><%= booking.service_id %></p>
+                    <p class="text-muted mb-0"><%= booking.duration %></p>
+                    <p class="text-muted mb-0"><%= booking.final_price %></p>
                   </div>
                 </div>
                 <span class="badge rounded-pill badge-success">Active</span>
@@ -61,7 +63,7 @@
 
 
 
- <!-- My Services was booked Container -->
+ <!-- My Services were booked Container -->
 
 <div class="container p-3 mt-5 bg-light border rounded">
 
@@ -71,16 +73,13 @@
 <table class="table align-middle mt-3 bg-white">
   <thead class="table-header text-light">
     <tr>
-      <th>Name Client</th>
       <th>Title Service</th>
-      <th>Category</th>
-      <th>My Price</th>
-      <th>Request</th>
+      <th>Price</th>
     </tr>
   </thead>
 
   <tbody>
-    <% @user.services.each do |service| %>
+    <% @booked.each do |booking| %>
       <tr>
         <td>
           <div class="d-flex align-items-center">
@@ -91,22 +90,11 @@
                 class="rounded-circle"
                 />
             <div class="ms-3">
-              <p class="fw-bold mb-1"><%= service.title %></p>
-              <p class="text-muted mb-0"><%= service.title %></p>
+              <p class="fw-bold mb-1"><%= booking.service.title %></p>
+              <p class="text-muted mb-0"><%= booking.service.price %></p>
             </div>
           </div>
         </td>
-        <td>
-          <p class="fw-normal mb-1"><%= service.title %></p>
-          <p class="text-muted mb-0"><%= service.category %></p>
-        </td>
-        <td>
-          <p class="text-muted mb-0"><%= service.category %></p>
-        </td>
-        <td>
-          <p class="text-muted mb-0 ps-3">€ <%= service.price %></p>
-        </td>
-        <td>
           <button type="button" class="btn btn-link btn-sm btn-rounded">
             Confirm
           </button>
@@ -116,5 +104,3 @@
   </tbody>
 </table>
 </div>
-
-
