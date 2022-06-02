@@ -1,32 +1,46 @@
-Info do service
 
-  <div class="map"></div>
 
-<div class="container margin-top-negative">
+
   <div class="row">
-    <div class="col-8">
-      <div class="flat-show-card">
-        <h3><%= @service.title %></h3>
-        <p class="flat-show-address"><%= @service.description %></p>
-      </div>
-
-        <h3>Service Location</h3>
-
-                    <div class="flat-card-map">
-                        <div class="col-md-12 mt-3">
-                            <div style="width: 98%; height: 340px; margin-left: 9px;"
-                                data-controller="mapbox"
-                                data-mapbox-markers-value="<%= @markers.to_json %>"
-                                data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
-                            </div>
-                        </div>
-                    </div>
-
-        <div class="map"></div>
-      </div>
-
 
     <div class="col-4">
+        <div class="container">
+            <div class="card">
+                <div class="card-header">
+                    <img src="https://c0.wallpaperflare.com/preview/483/210/436/car-green-4x4-jeep.jpg" alt="rover" />
+                </div>
+                <div class="card-body">
+                    <span class="tag tag-teal"><%= @service.category %> </span>
+                    <h4><%= @service.title %></h4>
+                    <p><%= @service.description %> </p>
+                    <div class="user">
+                        <img src="https://yt3.ggpht.com/a/AGF-l7-0J1G0Ue0mcZMw-99kMeVuBmRxiPjyvIYONg=s900-c-k-c0xffffffff-no-rj-mo" alt="user" />
+                        <div class="user-info">
+                              <h5><%= @user.first_name %></h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div class="container" style="padding-left:40px">
+            <%=  link_to 'back', :back, class: 'btn btn-outline-dark btn-block w-40 btn-sm'%>
+
+          </div>
+
+    </div>
+    <div class="flat-card-map col-6">
+
+            <div style="width: 40%; height: 340px; margin-left: 9px;"
+                data-controller="mapbox"
+                data-mapbox-markers-value="<%= @markers.to_json %>"
+                data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+            </div>
+
+    </div>
+
+    <div class="col-2">
+    <div class="flat-cards d-flex flex-column justify-content-end align-items-center">
+
       <div class="flat-show-card">
 
         <%= link_to "Book this Service", new_service_booking_path(@service), class: 'btn btn-success mt-3 form-nice-class' %>
@@ -53,8 +67,15 @@ Info do service
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</div>
 
-<%=  link_to 'back', :back, class: 'btn btn-outline-dark btn-block w-40 btn-sm'%>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+  </div>
