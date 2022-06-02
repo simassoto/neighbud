@@ -56,7 +56,7 @@ class ServicesController < ApplicationController
 
   def update
     if @service.update(service_params)
-      redirect_to user_path(current_user)
+      redirect_to dashboard_path
     else
       render :edit
     end
@@ -64,7 +64,7 @@ class ServicesController < ApplicationController
 
   def destroy
     @service.destroy
-    redirect_to user_path(current_user)
+    redirect_to dashboard_path
   end
 
   private

@@ -1,0 +1,50 @@
+<div class="row justify-content-center d-flex justify-content-around align-self-center p-1 mt-5">
+  <div class="col-4 mt-5">
+    <h4>Edit the service:</h4>
+  </div>
+</div>
+
+<div class="row d-flex justify-content-center">
+  <div class="col-4">
+    <div class="flat-form2">
+      <%= simple_form_for(@service) do |f| %>
+
+        <div class="flat-form2">
+          <%= f.label :Title %>
+          <%= f.input :title, label: false, placeholder: "What is the service?", :input_html => { class: "form-nice-class" } %>
+        </div>
+
+        <div class="flat-form2">
+          <%= f.label :Description %>
+          <%= f.input :description, label: false, placeholder: "Type a short and objective description", :input_html => { class: "form-nice-class" } %>
+        </div>
+
+        <div class="flat-form2">
+          <%= f.label :Category %>
+          <%= f.input :category, label: false, include_blank: true, prompt: 'Click to select', collection: ['Education', 'Sport', 'Reparing', 'Social Care', 'Health Care', 'Financial', 'Maintenance', 'Entertainment', 'Food', 'Others'], label: false, :input_html => { class: "form-nice-class"} %>
+        </div>
+
+        <div class="flat-form2">
+          <%= f.label :Address %>
+          <%= f.input :address, label: false, placeholder: "Type in the adress", :input_html => { class: "form-nice-class" } %>
+        </div>
+
+        <div class="flat-form2">
+          <%= f.label :Price %>
+          <%= f.input :price, label: false, placeholder: "How many NeighBuds Coins for that?", :input_html => { class: "form-nice-class", min: '1', value: "1" }  %>
+        </div>
+
+        <div class="flat-form2">
+          <%= f.submit 'Edit the service', class: 'btn btn-success btn-block w-100 p-2' %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<div class="row justify-content-center p-2">
+  <div class="col-4  d-flex justify-content-between align-self-center p-1">
+    <%=  link_to 'Edit the service', dashboard_path, class: 'btn btn-outline-dark btn-block w-40 btn-sm'%>
+    <%= link_to 'Back', :back, class: 'btn btn-outline-dark btn-block w-40 btn-sm'%>
+  </div>
+</div>
