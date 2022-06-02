@@ -6,6 +6,7 @@
 @import "banner";
 @import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
 
+@import "movecard";
 @import "cards";
 @import "searchbar";
 @import "showservice";
@@ -15,7 +16,6 @@
 
 .main-title{
   font-family: Anek Latin;
-
 }
 
 @import "bootstrap/scss/functions";
