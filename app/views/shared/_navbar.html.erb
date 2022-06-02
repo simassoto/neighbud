@@ -1,51 +1,57 @@
 
 
 
-<div class="header">
-
-
-
-<!-- SEARCH BAR -->
-
-  <div class="containersb mt-2">
-    <%= form_tag services_path, method: :get do %>
-      <%= text_field_tag :query, params[:query], placeholder: "Find a service" %>
-      <%= submit_tag "Search", class: "btn btn-primary" %>
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <div class="container-fluid">
+    <%= link_to root_path, class: "navbar-brand" do %>
+      <%= image_tag "LOGOICON.png" %>
     <% end %>
-  </div>
-</div>
 
-<!-- SEARCH BAR -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-  <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
-  <label for="openSidebarMenu" class="sidebarIconToggle">
-    <div class="spinner diagonal part-1"></div>
-    <div class="spinner horizontal"></div>
-    <div class="spinner diagonal part-2"></div>
-  </label>
+<!-- searchbar -->
+      <div class="search-form-control form-group">
+        <%= form_tag services_path, method: :get do %>
+        <input class="form-control string required" <%= text_field_tag :query, params[:query], placeholder: "Find a service" %>>
+        <button class="btn btn-flat" <%= submit_tag "Search", class: "btn btn-primary" %>>
+          <i class="fas fa-search"></i> Search
+        </button>
+        <% end %>
+      </div>
+<!-- searchbar -->
 
-  <div id="sidebarMenu">
-    <ul class="sidebarMenuInner">
-      <li>Neighbud <span>MENU</span></li>
-      <li><a><%= link_to "home", root_path %></a></li>
-      <li><a><%= link_to "My Profile", edit_user_registration_path(current_user) %></a></li>
-      <li><a><%= link_to "My Dashboard", dashboard_path %></a></li>
-      <li><a><%= link_to "Add Service", new_service_path %></a></li>
-
-      <% if user_signed_in? %>
-      <li class="nav-item dropdown">
-        <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %><a> RODRIGO<%= current_user.first_name %></a>
-        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-          <!-- <%= link_to "Action", "#", class: "dropdown-item" %>
-          <%= link_to "Another action", "#", class: "dropdown-item" %> -->
-          <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item text-dark" %>
-        </div>
-      </li>
-      <% else %>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto">
+        <% if user_signed_in? %>
+          <li class="nav-item active">
+            <%= link_to "Home", root_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "My Dashboard", dashboard_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "My Profile", edit_user_registration_path(current_user), class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Add service", new_service_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item dropdown">
+            <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <!--<%= link_to "Action", "#", class: "dropdown-item" %>
+              <%= link_to "Another action", "#", class: "dropdown-item" %>-->
+              <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+            </div>
+          </li>
+        <% else %>
           <li class="nav-item">
             <%= link_to "Login", new_user_session_path, class: "nav-link" %>
           </li>
-      <% end %>
-
-    </ul>
+        <% end %>
+      </ul>
+    </div>
   </div>
+</div>
+
