@@ -24,7 +24,8 @@ class ServicesController < ApplicationController
     # end
   end
 
-  # def show
+   def show
+    @user = current_user
   #   @markers = [
   #     {
   #       lat: @service.latitude,
@@ -34,7 +35,7 @@ class ServicesController < ApplicationController
   #     }
   #   ]
 
-  # end
+    end
 
   def new
     @service = Service.new
