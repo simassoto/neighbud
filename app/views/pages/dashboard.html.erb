@@ -5,8 +5,8 @@
 MY DASHBOARD
 </h3>
 
-  <p><%= @current_user.first_name %></p>
-  <p><%= @current_user.wallet %></p>
+  <p><%= @user.first_name %></p>
+  <p><%= @user.wallet %></p>
 
   <div class="row">
     <% @user.services.each do |service| %>
