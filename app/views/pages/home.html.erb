@@ -4,19 +4,21 @@
         <div class="col-12 d-flex justify-content-center text-centerd-block" style="align-items: end">
           <h1 class>Find a neighboor. Find a service.</h1>
         </div>
-        <div class="search-form-control form-group d-block p-2 ">
-          <%= form_tag services_path, method: :get do %>
-          <%= text_field_tag :query, params[:query], class: "form-control string required" %>
-          <%= button_tag(type: "submit", class: "btn btn-default") do %>
-             <i class="fa-solid fa-magnifying-glass"></i>
-          <% end %>
-          <% end %>
-        </div>
+
+            <%= simple_form_for :search, url: services_path, method: :get do |f| %>
+            <div class="search-form-control">
+                <%= text_field_tag :query, params[:query], class: "form-control string required" %>
+                <button name="button" type="submit" class="btn btn-secondary btn-sm table-header">
+                <i class="fas fa-search"></i> Search
+                </button>
+            </div>
+            <% end %>
+
     </div>
   </div>
 </div>
 
-<div class="container d-flex justify-content-between">
+<div class="container d-flex justify-content-center card-category-margin">
 
   <div class="d-flex card-category2 text-center flex-column justify-content-center align-items-center grow">
     <i class="fa-solid fa-book-open card-icon2"></i>
@@ -42,10 +44,6 @@
     <i class="fa-solid fa-heart-pulse card-icon2"></i>
     <span class="text-middle2 text-center">Health Care</span>
   </div>
-
-</div>
-
-<div class="container d-flex justify-content-between">
 
   <div class="d-flex card-category2 text-center flex-column justify-content-center align-items-center grow">
     <i class="fa-solid fa-sack-dollar card-icon2"></i>
@@ -73,3 +71,32 @@
   </div>
 
 </div>
+
+<!--<div class="container d-flex justify-content-between">
+
+  <div class="d-flex card-category2 text-center flex-column justify-content-center align-items-center grow">
+    <i class="fa-solid fa-sack-dollar card-icon2"></i>
+    <span class="text-middle2 text-center">Financial</span>
+  </div>
+
+  <div class="d-flex card-category2 text-center flex-column justify-content-center align-items-center grow">
+    <i class="fa-solid fa-book-open card-icon2"></i>
+    <span class="text-middle2 text-center">Maintenance</span>
+  </div>
+
+  <div class="d-flex card-category2 text-center flex-column justify-content-center align-items-center grow">
+    <i class="fa-solid fa-camera card-icon2"></i>
+    <span class="text-middle2 text-center">Entertainment</span>
+  </div>
+
+  <div class="d-flex card-category2 text-center flex-column justify-content-center align-items-center grow">
+    <i class="fa-solid fa-apple-whole card-icon2"></i>
+    <span class="text-middle2 text-center">Food</span>
+  </div>
+
+  <div class="d-flex card-category2 text-center flex-column justify-content-center align-items-center grow">
+    <i class="fa-solid fa-shuffle card-icon2"></i>
+    <span class="text-middle2 text-center">Other</span>
+  </div>
+
+</div>-->

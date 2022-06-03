@@ -6,6 +6,8 @@ class User < ApplicationRecord
 
   has_many :services
 
-  validates :email, uniqueness: true
+
+
+  has_many :bookings
 
 end

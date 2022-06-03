@@ -91,3 +91,7 @@
 .table-header {
   background-color: #7E2BB6;
 }
+
+.table > :not(:first-child) {
+  border-top: 0px solid currentColor;
+}
