@@ -5,7 +5,7 @@ body{
 	justify-content: center;
 	align-items: center;
 	min-height: 100vh;
-	font-family: 'Jost', sans-serif;
+	font-family: 'Anek Latin', sans-serif;
 	background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
 }
 .main{
@@ -83,7 +83,7 @@ button:hover{
 	transform: translateY(-500px);
 }
 #chk:checked ~ .login label{
-	transform: scale(1);	
+	transform: scale(1);
 }
 #chk:checked ~ .signup label{
 	transform: scale(.6);
