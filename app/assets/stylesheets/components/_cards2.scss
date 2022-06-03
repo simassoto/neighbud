@@ -1,15 +1,16 @@
 // CARDS
 
 
-.card-category2 {
-  position: relative;
-  background-image: linear-gradient(to bottom right, rgba(126, 43, 182,1), rgba(126, 43, 182,1));
-  height: 110px;
-  width: 150px;
-  padding: 10px;
-  margin: 10px;
-  border-radius: 15px;
-  box-shadow: 2px 2px 3px rgba(0,0,0,0.4);
+.card-category-homepage {
+    position: relative;
+    background-image: linear-gradient(to bottom right, #7e2bb6, #7e2bb6);
+    height: 110px;
+    width: 130px;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4);
+    color: white;
 }
 
 .grow {
