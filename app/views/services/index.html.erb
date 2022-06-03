@@ -66,21 +66,40 @@
             <h2><i class="fa fa-file-o"></i> Result</h2>
             <hr>
             <!-- BEGIN SEARCH INPUT -->
-            <div class="input-group mb-5">
+            <div class="input-group mb-3">
               <input type="text" class="form-control" value="" placeholder="Search">
               <span class="input-group-btn">
                 <button class="btn btn-primary" type="button"><i class="fa fa-search"></i></button>
               </span>
             </div>
+
+
+
+            <!-- MAP -->
+
+              <div class="col-sm-12 d-flex mb-3">
+                      <div style="width: 100%; height: 250px; margin-left: 0px;"
+                          data-controller="mapbox"
+                          data-mapbox-markers-value="<%= @markers.to_json %>"
+                          data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+                      </div>
+              </div> 
+
+            <!-- MAP -->
+
+
+
+
+
             <!-- END SEARCH INPUT -->
-            <h5><strong>Search Results</strong></h5>
+            <h5><strong>List Results</strong></h5>
             
             <div class="padding"></div>
             
             <div class="row">
               <!-- BEGIN ORDER RESULT -->
               <div class="col-sm-6">
-                <div class="btn-group border mb-2">
+                <div class="btn-group border mb-5">
                   <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
                     Order by <span class="caret"></span>
                   </button>
@@ -96,7 +115,7 @@
               <!-- END ORDER RESULT -->
 
               <!-- BEGIN TABLE RESULT -->
-                        <div class="container">
+                        <div class="container table-responsive">
                             <ul class="responsive-table">
                               <li class="table-header">
                                 <div class="col col-1">Image</div>
@@ -104,7 +123,6 @@
                                 <div class="col col-3">Price</div>
                               </li>
                        
-
                               <% @services.each do |service| %>
                                 <%= link_to service_path(service) do %>
                                   <li class="table-row d-flex">
@@ -117,41 +135,19 @@
                             </ul>
                         </div>
             <!-- END TABLE RESULT -->
-
-
-            <!-- BEGIN TABLE RESULT OLD TABLE
-          <div class="container">
-            <div class="table-responsive">
-              <table class="table table-hover">        
-                  <tbody>
-                    <% @services.each do |service| %>
-                        <tr>
-                          <%= link_to service_path(service) do %>
-                            <div class="d-flex">
-                              <td><div class="number text-center"><%= service.id %></div></td>
-                              <td><div class="image"><img src="https://via.placeholder.com/400x300/FF8C00" alt=""></div></td>
-                              <td><div class="product"><strong><%= service.title %></strong><br><%= service.description %></div></td>
-                              <td><div class="price text-right fs-6">€ <%= service.price %></div></td>
-                            </div>
-                          <% end %>
-                        </tr>
-                    <% end %>
-                  </tbody>
-              </table>
-            </div>
-            END TABLE RESULT OLD TABLE -->
-
             
             <!-- BEGIN PAGINATION -->
-            <ul class="pagination table-header">
-              <li class="disabled"><a href="#">«</a></li>
-              <li class="active"><a href="#">1</a></li>
-              <li><a href="#">2</a></li>
-              <li><a href="#">3</a></li>
-              <li><a href="#">4</a></li>
-              <li><a href="#">5</a></li>
-              <li><a href="#">»</a></li>
-            </ul>
+            <div class="container">
+              <ul class="pagination responsive-table ps-4">
+                <li class="disabled"><a href="#">«</a></li>
+                <li class="active"><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">»</a></li>
+              </ul>
+            </div>
             <!-- END PAGINATION -->
           </div>
           <!-- END RESULT -->
