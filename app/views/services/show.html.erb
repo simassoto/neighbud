@@ -42,9 +42,9 @@
     <div class="flat-cards d-flex flex-column justify-content-end align-items-center">
 
       <div class="flat-show-card">
-
-        <%= link_to "Book this Service", new_service_booking_path(@service), class: 'btn btn-success mt-3 form-nice-class' %>
-
+        <% unless @service.user == current_user %>
+         <%= link_to "Book this Service", new_service_booking_path(@service), class: 'btn btn-success mt-3 form-nice-class' %>
+        <% end %>
       </div>
       <div class="flat-show-card">
         <h4>Price/day</h4>
