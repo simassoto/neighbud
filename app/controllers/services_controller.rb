@@ -13,27 +13,26 @@ class ServicesController < ApplicationController
       @services = Service.all
     end
 
-
-    # @markers = @services.geocoded.map do |service|
-    #   {
-    #     lat: service.latitude,
-    #     lng: service.longitude,
-    #     info_window: render_to_string(partial: "info_window", locals: { service: service }),
-    #     image_url: helpers.asset_url("")
-    #   }
-    # end
+    @markers = @services.geocoded.map do |service|
+      {
+        lat: service.latitude,
+        lng: service.longitude,
+        info_window: render_to_string(partial: "info_window", locals: { service: service }),
+        image_url: helpers.asset_url("")
+      }
+    end
   end
 
    def show
     @user = current_user
-  #   @markers = [
-  #     {
-  #       lat: @service.latitude,
-  #       lng: @service.longitude,
-  #       info_window: render_to_string(partial: "info_window", locals: { service: @service }),
-  #       image_url: helpers.asset_url("")
-  #     }
-  #   ]
+    # @markers = [
+    #   {
+    #     lat: @service.latitude,
+    #     lng: @service.longitude,
+    #     info_window: render_to_string(partial: "info_window", locals: { service: @service }),
+    #     image_url: helpers.asset_url("")
+    #   }
+    # ]
 
     end
 

@@ -80,18 +80,21 @@
       .responsive-table {
         li {
           border-radius: 3px;
-          padding: 10px 10px;
+          padding: 10px;
           display: flex;
           justify-content: space-between;
           margin-bottom: 15px;
+          color: black;
+          list-style-type: none;
         }
+
         .table-header {
           background-color: #7E2BB6;
           font-size: 14px;
           color: white;
           text-transform: uppercase;
           letter-spacing: 0.03em;
-          height: 40px;
+          width: 40;
           text-align: left;
         }
         .table-row {
