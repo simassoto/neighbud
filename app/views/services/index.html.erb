@@ -91,26 +91,47 @@
                     <li><a href="#">Rating</a></li>
                   </ul>
                 </div>
-              </div>
-              <!-- END ORDER RESULT -->
-              
+              </div>           
             </div>
+              <!-- END ORDER RESULT -->
+
+              <!-- BEGIN TABLE RESULT -->
+                        <div class="container">
+                            <ul class="responsive-table">
+                              <li class="table-header">
+                                <div class="col col-1">Image</div>
+                                <div class="col col-2">Title</div>
+                                <div class="col col-3">Price</div>
+                              </li>
+                       
+
+                              <% @services.each do |service| %>
+                                <%= link_to service_path(service) do %>
+                                  <li class="table-row d-flex">
+                                    <div class="image col col-1"><img src="https://via.placeholder.com/400x300/FF8C00" alt=""></div>
+                                    <div class="col col-2 product"><strong><%= service.title %></strong><br><%= service.description %></div>
+                                    <div class="col col-3 price text-right fs-6" data-label="Amount">€ <%= service.price %></div>
+                                  </li>
+                                <% end %>
+                              <% end %>
+                            </ul>
+                        </div>
+            <!-- END TABLE RESULT -->
 
 
-            
-            
-            <!-- BEGIN TABLE RESULT -->
+            <!-- BEGIN TABLE RESULT OLD TABLE
+          <div class="container">
             <div class="table-responsive">
               <table class="table table-hover">        
                   <tbody>
                     <% @services.each do |service| %>
-                        <tr class="table-height">
+                        <tr>
                           <%= link_to service_path(service) do %>
                             <div class="d-flex">
-                              <div class="number text-center"><%= service.id %></div>
-                              <div class="image"><img src="https://via.placeholder.com/400x300/FF8C00" alt=""></div>
-                              <div class="product"><strong><%= service.title %></strong><br><%= service.description %></div>
-                              <div class="price text-right fs-6">€ <%= service.price %></div>
+                              <td><div class="number text-center"><%= service.id %></div></td>
+                              <td><div class="image"><img src="https://via.placeholder.com/400x300/FF8C00" alt=""></div></td>
+                              <td><div class="product"><strong><%= service.title %></strong><br><%= service.description %></div></td>
+                              <td><div class="price text-right fs-6">€ <%= service.price %></div></td>
                             </div>
                           <% end %>
                         </tr>
@@ -118,10 +139,11 @@
                   </tbody>
               </table>
             </div>
-            <!-- END TABLE RESULT -->
+            END TABLE RESULT OLD TABLE -->
+
             
             <!-- BEGIN PAGINATION -->
-            <ul class="pagination">
+            <ul class="pagination table-header">
               <li class="disabled"><a href="#">«</a></li>
               <li class="active"><a href="#">1</a></li>
               <li><a href="#">2</a></li>
