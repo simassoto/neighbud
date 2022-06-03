@@ -1,7 +1,7 @@
 .banner-container-home{
-    background-image: linear-gradient(rgba(126, 43, 182, 0.4),rgba(126, 43, 182, 0.1)), asset-url("vizinhanca_1.jpg");
+    background-image: linear-gradient(rgba(126, 43, 182, 0.4),rgba(0, 0, 0, 0.6)), asset-url("vizinhanca_1.jpg");
     position: relative;
-    height: 30vh;
+    height: 75vh;
     background-position:top;
     background-size:cover;
     color: #fff;
@@ -21,3 +21,4 @@
         text-shadow: 2px 2px 3px rgba(0,0,0,0.4);
     }
 }
+

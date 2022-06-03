@@ -4,161 +4,115 @@
 
 <div class="container p-3 mt-3 bg-light border rounded">
 
-  <h3 class= "fw-bold border-bottom main-title">My Bookings</h3>
+    <h3 class= "fw-bold border-bottom main-title">My Bookings</h3>
 
-    <table class="table align-middle mt-3 bg-white main-title border-top: 2px solid currentColor;">
-      <thead class="table-header text-light">
-      <tr>
-        <th>Bookings</th>
-      </tr>
-      </thead>
-    </table>
+      <table class="table align-middle mt-3 bg-white main-title border-top: 2px solid currentColor;">
+        <thead class="table-header text-light">
+        <tr>
+          <th>Bookings</th>
+        </tr>
+        </thead>
+      </table>
 
-<div class="container">
   <div class="row mt-3">
-
-
     <% @user.bookings.each do |booking| %>
-      <div class="col-xl-6 mb-4">
-          <div class="card">
-            <div class="card-body">
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="d-flex align-items-center">
-                  <img
+      <div class="col-xl-2 mb-4">
+        <div class="card border shadow-0 mb-3 cardmove" style="max-width: 18rem;">
+          <div class="p-3">
+            <img
+              src="https://mdbootstrap.com/img/new/avatars/8.jpg"
+              alt=""
+              style="width: 45px; height: 45px, position: absolute;"
+              class="rounded-circle align-items-center"
+            />
 
-                    src="https://mdbootstrap.com/img/new/avatars/8.jpg"
-                    alt=""
-                    style="width: 45px; height: 45px, position: absolute;"
-                    class="rounded-circle align-items-center"
-                  />
+             <i class="fas fa-clock"></i><i class="ms-2"><%= booking.duration %> hours</i>
+
           </div>
-            <div class="card-body main-title">
-            
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="d-flex align-items-center">
-                  
-                  <div class="ms-3">
-                    <p class="fw-bold mb-1"><%= booking.date %></p>
-                    <p class="text-muted mb-0"><%= booking.service_id %></p>
-                    <p class="text-muted mb-0"><%= booking.duration %></p>
-                    <p class="text-muted mb-0"><%= booking.final_price %></p>
-                  </div>
-                </div>
-                <span class="badge rounded-pill badge-success">Active</span>
-              </div>
+          <div class="card-body text-dark">
+
+            <div class="ms-1 w-75 p-1">
+              <h6 class="fw-bold mb-0">Service</h6><p><%= booking.service.title %></p>
+              <h6 class="fw-bold mb-0">Date</h6><p><%= booking.date %></p>
+              <h6 class="fw-bold mb-0">Total Price</h6><p><%= "€ 123 (change)" %></p>
             </div>
-            <div
-              class="card-footer border-0 bg-light p-2 d-flex justify-content-left"
-            >
-              <a
-                class="btn btn-link m-0 text-reset ms-4 main-title"
-                href="#"
-                role="button"
-                data-ripple-color="primary"
-                >Edit<i class="fas fa-edit ms-2"></i
-              ></a>
-              <a
-                class="btn btn-link ms-0 text-reset ms-4 main-title"
-                href="#"
-                role="button"
-                data-ripple-color="primary"
-                >Delete<i class="fas fa-trash ms-2"></i
-              ></a>
-            </div>
+
+          </div>
+          <div class="card-footer bg-transparent border">
+            <a
+              class="btn btn-link m-0 text-reset ms-0 main-title"
+              href="#"
+              role="button"
+              data-ripple-color="primary"
+              >Edit<i class="fas fa-edit ms-2"></i
+            ></a>
+            <a
+              class="btn btn-link ms-0 text-reset ms-0 main-title"
+              href="#"
+              role="button"
+              data-ripple-color="primary"
+              >Delete<i class="fas fa-trash ms-2"></i
+            ></a>
           </div>
         </div>
-      <% end %>
-
+      </div>
+    <% end %>
   </div>
 </div>
-</div>
 
 
+  <!-- My Services were booked Container -->
 
 
+  <div class="container p-3 mt-5 bg-light border rounded">
 
- <!-- My Services were booked Container -->
+    <h3 class= "fw-bold border-bottom main-title">My Schedule</h3>
 
-<div class="container p-3 mt-5 bg-light border rounded">
-
-  <h3 class= "fw-bold border-bottom main-title">My Schedule</h3>
-
-
-
-  <table class="table align-middle mt-3 bg-white main-title">
-    <thead class="table-header text-light">
-      <tr>
-        <th>Name Client</th>
-        <th>Title Service</th>
-        <th>Category</th>
-        <th>My Price</th>
-        <th>Request</th>
-
-
-            <tbody>
-              <% @booked.each do |booking| %>
-                <tr>
-                  <td>
-                    <div class="d-flex align-items-center">
-                      <img
-                          src="https://mdbootstrap.com/img/new/avatars/8.jpg"
-                          alt=""
-                          style="width: 45px; height: 45px"
-                          class="rounded-circle"
-                          />
-                      
-                      <div class="ms-3">
-                        <p class="fw-bold mb-1"><%= booking.service.title %></p>
-                        <p class="text-muted mb-0"><%= booking.service.price %></p>
-                      </div>
-
-                    </div>
-
-                  </td>
-                    <button type="button" class="btn btn-link btn-sm btn-rounded">
-                      Confirm
-                    </button>
-                  </td>
-
-                </tr>
-      </thead>
-              <% end %>
-            </tbody>
-
-    <tbody>
-      <% @user.services.each do |service| %>
+    <table class="table align-middle mt-3 bg-white main-title">
+      <thead class="table-header text-light">
         <tr>
-          <td>
-            <div class="d-flex align-items-center">
-              <img
-                  src="https://mdbootstrap.com/img/new/avatars/8.jpg"
-                  alt=""
-                  style="width: 45px; height: 45px"
-                  class="rounded-circle"
-                  />
-              <div class="ms-3">
-                <p class="fw-bold mb-1"><%= service.title %></p>
-                <p class="text-muted mb-0"><%= service.title %></p>
+          <th>Name Client</th>
+          <th>Title Service</th>
+          <th>Category</th>
+          <th>My Price</th>
+          <th>Request</th>
+      </thead>
+
+      <tbody>
+        <% @user.services.each do |service| %>
+          <tr>
+            <td>
+              <div class="d-flex align-items-center">
+                <img
+                    src="https://mdbootstrap.com/img/new/avatars/8.jpg"
+                    alt=""
+                    style="width: 45px; height: 45px"
+                    class="rounded-circle"
+                    />
+                <div class="ms-3">
+                  <p class="fw-bold mb-1"><%= service.user.first_name %></p>
+                  <p class="text-muted mb-0"><%= service.user.last_name %></p>
+                </div>
               </div>
-            </div>
-          </td>
-          <td>
-            <p class="fw-normal mb-1"><%= service.title %></p>
-            <p class="text-muted mb-0"><%= service.category %></p>
-          </td>
-          <td>
-            <p class="text-muted mb-0"><%= service.category %></p>
-          </td>
-          <td>
-            <p class="text-muted mb-0 ps-3">€ <%= service.price %></p>
-          </td>
-          <td>
-            <button type="button" class="btn btn-link btn-sm btn-rounded">
-              Confirm
-            </button>
-          </td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
-</div>
+            </td>
+            <td>
+              <p class="fw-normal mb-1"><%= service.title %></p>
+            </td>
+            <td>
+              <p class="text-muted mb-0"><%= service.category %></p>
+            </td>
+            <td>
+              <p class="text-muted mb-0 ps-3">€ <%= service.price %></p>
+            </td>
+            <td>
+              <button type="button" class="btn btn-link btn-sm btn-rounded">
+                Confirm
+              </button>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+
+
