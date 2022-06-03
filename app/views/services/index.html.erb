@@ -101,16 +101,19 @@
             
             <!-- BEGIN TABLE RESULT -->
             <div class="table-responsive">
-              <table class="table table-hover">            
+              <table class="table table-hover">        
                   <tbody>
                     <% @services.each do |service| %>
-                      <tr class="table-height">
-                        <td class="number text-center"><%= service.id %></td>
-                        <td class="image"><img src="https://via.placeholder.com/400x300/FF8C00" alt=""></td>
-                        <td class="product"><strong><%= service.title %></strong><br><%= service.description %></td>
-                        <td class="price text-right fs-6">€ <%= service.price %></td>
-                        <td ><%= link_to '', service_path(service) %><i class="fa fa-search"></i></td>
-                      </tr>
+                        <tr class="table-height">
+                          <%= link_to service_path(service) do %>
+                            <div class="d-flex">
+                              <div class="number text-center"><%= service.id %></div>
+                              <div class="image"><img src="https://via.placeholder.com/400x300/FF8C00" alt=""></div>
+                              <div class="product"><strong><%= service.title %></strong><br><%= service.description %></div>
+                              <div class="price text-right fs-6">€ <%= service.price %></div>
+                            </div>
+                          <% end %>
+                        </tr>
                     <% end %>
                   </tbody>
               </table>
@@ -137,23 +140,3 @@
   <!-- END SEARCH RESULT -->
 </div>
 </div>
-
-
-
-
-
-
-
-
-<!-- FORM -->
-
-<% @services.each do |service| %>
-            <h5><%= service.title %></h5>
-            <h6><%= service.description %></h6>
-            <h6>€<%= service.price %></h6>
-            <%= link_to 'more info', service_path(service), class: "btn btn-outline-dark btn-sm" %>
-    <% end %>
-
-
- <%=  link_to 'back', :back, class: 'btn btn-outline-dark btn-block w-40 btn-sm'%>
-
