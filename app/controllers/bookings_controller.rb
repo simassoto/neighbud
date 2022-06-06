@@ -14,6 +14,12 @@ class BookingsController < ApplicationController
     redirect_to dashboard_path
   end
 
+  def set_confirmed
+    @booking = Booking.find(params[:booking_id])
+    @booking.confirmed!
+    redirect_to dashboard_path
+  end
+
   def show
   end
 
