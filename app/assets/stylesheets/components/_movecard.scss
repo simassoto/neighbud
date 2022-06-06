@@ -11,7 +11,7 @@
 }
 
 .cardmove:hover {
-    transform: translateY(-1rem);
+    transform: translateY(-.4rem);
 }
 
 .cardmove:hover~.card {
@@ -21,4 +21,48 @@
 
 .cardmove:not(:first-child) {
     margin-left: -130px;
+}
+
+
+// move button
+
+
+.buttonmove {
+    /* ... */
+
+    border-radius: 16px;
+
+    transition: .2s;
+}
+
+.buttonmove:hover {
+    transform: translateY(-.2rem);
+}
+
+.buttonmove:hover~.card {
+    transform: translateX(70px);
+}
+
+
+.buttonmove:not(:first-child) {
+    margin-left: -130px;
+}
+
+
+// Text hover button
+
+#DivForHoverItem {
+    /*just so we can see it*/
+    height: 50px;
+    width: 50px;
+    background-color: white;
+}
+
+#HiddenText {
+    display: none;
+    color: #7E2BB6;
+}
+
+#DivForHoverItem:hover #HiddenText {
+    display:block;
 }
