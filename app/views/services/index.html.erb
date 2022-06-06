@@ -12,7 +12,7 @@
           <div class="col-md-3">
             <h5 class="grid-title"><i class="fa fa-filter"></i> Filters</h5>
             <hr>
-            
+
             <!-- BEGIN FILTER BY CATEGORY -->
             <h5><strong>By category:</strong></h5>
             <div class="checkbox">
@@ -31,9 +31,9 @@
               <label><input type="checkbox" class="icheck"> Mobile</label>
             </div>
             <!-- END FILTER BY CATEGORY -->
-            
+
             <div class="mb-3"></div>
-            
+
             <!-- BEGIN FILTER BY DATE -->
             <h5><strong>By date:</strong></h5>
             From
@@ -42,7 +42,7 @@
               <span class="input-group-addon bg-blue"><i class=""></i></span>
             </div>
             <input type="hidden" id="dtp_input1" value="">
-            
+
             To
             <div class="input-group date form_date" data-date="2014-06-14T05:25:07Z" data-date-format="dd-mm-yyyy" data-link-field="dtp_input2">
               <input type="text" class="form-control">
@@ -50,9 +50,9 @@
             </div>
             <input type="hidden" id="dtp_input2" value="">
             <!-- END FILTER BY DATE -->
-            
+
             <div class="mb-3"></div>
-            
+
             <!-- BEGIN FILTER BY PRICE -->
             <h5><strong>By price:</strong></h5>
             <div class="slider-primary">
@@ -83,7 +83,7 @@
                           data-mapbox-markers-value="<%= @markers.to_json %>"
                           data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
                       </div>
-              </div> 
+              </div>
 
             <!-- MAP -->
 
@@ -93,9 +93,9 @@
 
             <!-- END SEARCH INPUT -->
             <h5><strong>List Results</strong></h5>
-            
+
             <div class="padding"></div>
-            
+
             <div class="row">
               <!-- BEGIN ORDER RESULT -->
               <div class="col-sm-6">
@@ -110,7 +110,7 @@
                     <li><a href="#">Rating</a></li>
                   </ul>
                 </div>
-              </div>           
+              </div>
             </div>
               <!-- END ORDER RESULT -->
 
@@ -122,20 +122,20 @@
                                 <div class="col col-2">Title</div>
                                 <div class="col col-3">Price</div>
                               </li>
-                       
+
                               <% @services.each do |service| %>
                                 <%= link_to service_path(service) do %>
                                   <li class="table-row d-flex">
                                     <div class="image col col-1"><img src="https://via.placeholder.com/400x300/FF8C00" alt=""></div>
                                     <div class="col col-2 product"><strong><%= service.title %></strong><br><%= service.description %></div>
-                                    <div class="col col-3 price text-right fs-6" data-label="Amount">€ <%= service.price %></div>
+                                    <div class="col col-3 price text-right fs-6" data-label="Amount">$NB <%= service.price %></div>
                                   </li>
                                 <% end %>
                               <% end %>
                             </ul>
                         </div>
             <!-- END TABLE RESULT -->
-            
+
             <!-- BEGIN PAGINATION -->
             <div class="container">
               <ul class="pagination responsive-table ps-4">
