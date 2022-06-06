@@ -8,6 +8,12 @@ class BookingsController < ApplicationController
     @booked = Booking.where(services: { user: current_user }).joins(:service)
   end
 
+  def set_approved
+    @booking = Booking.find(params[:booking_id])
+    @booking.approved!
+    redirect_to dashboard_path
+  end
+
   def show
   end
 
@@ -28,8 +34,9 @@ class BookingsController < ApplicationController
   end
 
   def destroy
-    @booking = Booking.find(params[:id])
-    @booking.destroy
+
+    @booking.rejected!
+
     redirect_to dashboard_path, notice: 'The booking was successfully deleted.'
   end
 

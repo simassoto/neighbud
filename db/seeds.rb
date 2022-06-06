@@ -1,4 +1,5 @@
 puts "Destroy old services"
+Booking.destroy_all
 Service.destroy_all
 User.destroy_all
 
