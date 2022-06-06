@@ -23,6 +23,7 @@ class BookingsController < ApplicationController
     if @booking.save
       redirect_to bookings_path
     else
+      flash[:notice] = @booking.errors.full_messages.first
       render :new
     end
   end
