@@ -135,13 +135,9 @@
                   <div class="card-footer bg-transparent border">
 
                   <%= link_to 'Delete', booking_path(booking), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-danger btn-sm rounded-pill text-light" %>
-                  <% if booking.approved? %>
-                  <%= link_to "Transfer $NB",  booking_set_confirmed_path(booking), method: :post, class: "btn btn-success btn-sm rounded-pill text-light ms-4" %>
 
-                  <% else %>
-                      <h8>Service Requested</h8>
+                  <%= link_to 'Done', booking_set_confirmed_path(booking), method: :post, data: {confirm: "Are you sure?"}, class: "btn btn-success btn-sm rounded-pill text-light" %>
 
-                  <% end %>
                   </div>
                 </div>
             </div>

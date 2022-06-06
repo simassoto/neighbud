@@ -5,7 +5,7 @@ class Booking < ApplicationRecord
 
   enum status: [:requested, :approved, :rejected, :confirmed]
 
-  validate :wallet_money
+  validate :wallet_money, on: :create
 
   validates :date, presence: true
   validates :duration, presence: true, numericality: { greater_than_or_equal_to: 1 }

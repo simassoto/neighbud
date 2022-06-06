@@ -15,9 +15,20 @@ class BookingsController < ApplicationController
   end
 
   def set_confirmed
-    @booking = Booking.find(params[:booking_id])
-    @booking.confirmed!
-    redirect_to dashboard_path
+    booking = Booking.find(params[:booking_id])
+    service = Service.find(booking.service_id)
+
+    total_price = service.price * booking.duration
+    # se o status do booking for "confirmado"
+    if booking.confirmed!
+      # adiciona o dinheiro ao user que fez o serviço
+      service_user = booking.service.user
+      service_user.update(wallet: service_user.wallet += total_price)
+      # booking.service.user.wallet += total_price
+    # subtrai do user que solicitou o serviço
+      current_user.update(wallet: current_user.wallet -= total_price)
+    end
+
   end
 
   def show
@@ -40,8 +51,8 @@ class BookingsController < ApplicationController
   end
 
   def destroy
-
-    @booking.rejected!
+    booking = params[:booking]
+    booking.rejected!
 
     redirect_to dashboard_path, notice: 'The booking was successfully deleted.'
   end
