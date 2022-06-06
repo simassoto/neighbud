@@ -24,7 +24,7 @@ class ServicesController < ApplicationController
   end
 
    def show
-    @user = current_user
+    @service = Service.find(params[:id])
     # @markers = [
     #   {
     #     lat: @service.latitude,

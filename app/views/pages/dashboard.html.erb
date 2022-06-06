@@ -192,10 +192,20 @@
             <p class="text-muted mb-0 ps-3">$NB <%= booking.service.price %></p>
           </td>
           <td>
+
+          <%= form_for(booking, remote: true, data: { confirm: "You sure?"}) do |fa| %>
+            <%= fa.hidden_field :status, :value => 1 %>
+            <%= fa.submit "Approve", class: "btn btn-large btn-success" %>
+          <% end %>
+          <%= form_for(booking, remote: true, method: :delete, data: { confirm: "You sure?" }) do |fr| %>
+            <%= fr.hidden_field :status, :value => 2 %>
+            <%= fr.submit "Reject", class: "btn btn-large btn-danger" %>
+          <% end %>
+
             
-           <%= link_to 'Confirm', dashboard_path, data: {confirm: "Are you sure?"}, class: "btn btn-success btn-sm rounded-pill text-light" %>
-          </td>
+        
           
+
         </tr>
       <% end %>
     </tbody>
