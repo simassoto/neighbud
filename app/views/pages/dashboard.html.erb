@@ -133,7 +133,7 @@
                   <div class="card-footer bg-transparent border">
 
                   <%= link_to 'Delete', booking_path(booking), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-danger btn-sm rounded-pill text-light" %>
-
+                  <%= link_to 'Done', booking_set_confirmed_path(booking), method: :post, data: {confirm: "Are you sure?"}, class: "btn btn-success btn-sm rounded-pill text-light" %>
                   </div>
                 </div>
             </div>
@@ -168,7 +168,7 @@
         <th>Price</th>
 
         <th>Status</th>
-        
+
 
     </thead>
 
@@ -207,7 +207,7 @@
             <% end %>
 
           </td>
-         
+
         </tr>
       <% end %>
     </tbody>
