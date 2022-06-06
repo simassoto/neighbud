@@ -127,13 +127,21 @@
                       <!-- CHAMAR A FUNÇÃO TOTAL PRICE -->
                       <h6 class="fw-bold mb-0">Total Price</h6><p class="ms-2"> $NB <%= booking.service.price * booking.duration %></p>
 
+
+
                     </div>
 
                   </div>
                   <div class="card-footer bg-transparent border">
 
                   <%= link_to 'Delete', booking_path(booking), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-danger btn-sm rounded-pill text-light" %>
+                  <% if booking.approved? %>
+                  <%= link_to "Transfer $NB",  booking_set_confirmed_path(booking), method: :post, class: "btn btn-success btn-sm rounded-pill text-light ms-4" %>
 
+                  <% else %>
+                      <h8>Service Requested</h8>
+
+                  <% end %>
                   </div>
                 </div>
             </div>
@@ -168,7 +176,7 @@
         <th>Price</th>
 
         <th>Status</th>
-        
+
 
     </thead>
 
@@ -207,7 +215,7 @@
             <% end %>
 
           </td>
-         
+
         </tr>
       <% end %>
     </tbody>
