@@ -6,6 +6,7 @@
 @import "banner";
 @import "footer";
 @import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
 @import "movecard";
 @import "cards";
@@ -16,6 +17,7 @@
 @import "carddashboard";
 @import "listservices";
 @import "wallet";
+@import "aboutus";
 
 @import url('https://fonts.googleapis.com/css2?family=Anek+Latin:wght@100;200;300;400;500&display=swap');
 @import "landing_page_banner";
@@ -25,10 +27,15 @@
   font-family: 'Anek Latin', sans-serif;
 }
 
+.about-title{
+  font-family: 'Lobster', cursive;
+}
+
 @import "bootstrap/scss/functions";
 @import "bootstrap/scss/variables";
 @import "bootstrap/scss/mixins";
 @import "bootstrap/scss/utilities";
+
 
 $all-colors: map-merge-multiple($blues, $indigos, $purples, $pinks, $reds, $oranges, $yellows, $greens, $teals, $cyans);
 
