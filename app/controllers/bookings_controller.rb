@@ -21,7 +21,7 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @booking.service = Service.find(params[:service_id])
     if @booking.save
-      redirect_to bookings_path
+      redirect_to dashboard_path
     else
       render :new
     end
