@@ -12,7 +12,6 @@ Rails.application.routes.draw do
     post "set_approved", to: "bookings#set_approved"
     post "set_confirmed", to: "bookings#set_confirmed"
   end
-
+end
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-end

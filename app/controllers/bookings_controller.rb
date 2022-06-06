@@ -28,6 +28,7 @@ class BookingsController < ApplicationController
     # subtrai do user que solicitou o serviço
       current_user.update(wallet: current_user.wallet -= total_price)
     end
+
   end
 
   def show
