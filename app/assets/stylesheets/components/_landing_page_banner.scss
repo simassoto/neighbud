@@ -1,24 +1,24 @@
 .banner-container-home{
-    background-image: linear-gradient(rgba(126, 43, 182, 0.4),rgba(0, 0, 0, 0.6)), asset-url("vizinhanca_1.jpg");
-    position: relative;
-    height: 80vh;
-    background-position:top;
-    background-size:cover;
-    color: #fff;
-    background-repeat: no-repeat;
-    justify-content: center;
+  background-image: linear-gradient(rgba(98, 36, 140, 0.4),rgba(0, 0, 0, 0.8)), asset-url("vizinhanca_1.jpg");
+  position: relative;
+  height: 80vh;
+  background-position:top;
+  background-size:cover;
+  color: #fff;
+  background-repeat: no-repeat;
+  justify-content: center;
 
 
-    .banner-title{
-        margin: 0;
-        font-size: 60px;
-        font-weight: 700;
-        text-align: center;
-        padding-top: 200px;
-        font-family: 'Anek Latin', sans-serif;
-      }
-
-      h1 {
-        text-shadow: 2px 2px 3px rgba(0,0,0,0.4);
+  .banner-title{
+      margin: 0;
+      font-size: 60px;
+      font-weight: 700;
+      text-align: center;
+      padding-top: 200px;
+      font-family: 'Anek Latin', sans-serif;
     }
+
+    h1 {
+      text-shadow: 2px 2px 3px rgba(0,0,0,0.4);
+  }
 }
