@@ -40,35 +40,5 @@
             </div>
 
     </div>
-
-    <div class="col-2">
-    <div class="flat-cards d-flex flex-column justify-content-end align-items-center">
-
-      <div class="flat-show-card">
-        <% unless @service.user == current_user %>
-         <%= link_to "Book this Service", new_service_booking_path(@service), class: 'btn btn-success mt-3 form-nice-class' %>
-        <% end %>
-      </div>
-      <div class="flat-show-card">
-        <h4>Price/day</h4>
-        <div class="flex">
-
-          <div class="flex ms-3">
-            <i class="material-icons me-2">$NB</i> <%= @service.price %>
-          </div>
-        </div>
-      </div>
-      <div class="flat-show-card">
-        <div class="flex-align">
-          <h6 class="no-mb">Share with your friends</h6>
-
-          <div class="flex">
-            <i class="fa fa-facebook-square fa-2x me-2"></i>
-            <i class="fa fa-twitter-square fa-2x me-2"></i>
-            <i class="fa fa-pinterest-square fa-2x me-2"></i>
-            <i class="fa fa-envelope-square fa-2x"></i>
-          </div>
-
-        </div>
-    </div>
+  </div>
 </div>
