@@ -1,5 +1,5 @@
 class BookingsController < ApplicationController
-  before_action :set_service, only: [:show, :edit, :update, :destroy]
+  before_action :set_service, only: [:new, :show, :edit, :create, :update]
 
   def index
     #Bookings que EU FIZ
@@ -8,18 +8,24 @@ class BookingsController < ApplicationController
     @booked = Booking.where(services: { user: current_user }).joins(:service)
   end
 
+  def set_approved
+    @booking = Booking.find(params[:booking_id])
+    @booking.approved!
+    redirect_to dashboard_path
+  end
+
   def show
   end
 
   def new
     @booking = Booking.new
-    @service = Service.find(params[:service_id])
   end
 
   def create
     @booking = Booking.new(booking_params)
     @booking.user = current_user
-    @booking.service = Service.find(params[:service_id])
+    @booking.service = @service
+
     if @booking.save
       redirect_to dashboard_path
     else
@@ -28,7 +34,9 @@ class BookingsController < ApplicationController
   end
 
   def destroy
-    @booking.destroy
+
+    @booking.rejected!
+
     redirect_to dashboard_path, notice: 'The booking was successfully deleted.'
   end
 
@@ -39,6 +47,6 @@ class BookingsController < ApplicationController
   end
 
   def set_service
-    @booking = Booking.find(params[:id])
+    @service = Service.find(params[:service_id])
   end
 end

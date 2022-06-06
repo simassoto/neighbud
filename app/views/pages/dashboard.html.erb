@@ -25,10 +25,12 @@
                           <div class="voutcher-divider">
                             <div class="voutcher-left text-center">
                               <span class="voutcher-name"><%= @user.email %></span>
-                              <h5 class="voutcher-code"><%= @user.first_name %></h5>
+
+                              <h5 class="voutcher-code"><%= @user.first_name %> <%= @user.last_name %></h5>
                             </div>
                             <div class="voutcher-right text-center border-left">
                               <h5 class="discount-percent">$NB <%= @user.wallet %></h5>
+
                             </div>
                           </div>
                         </div>
@@ -63,7 +65,7 @@
                                 <h6 class="mb-0"><%= service.title %></h6>
                                 <div class="about">
                                   <span><%= service.category %></span>
-                                  <span style="float:right;"> $NB <%= service.price %></span>
+                                  <span style="float:right;"> €NB <%= service.price %></span>
                                 </div>
                               </div>
                             </div>
@@ -117,9 +119,14 @@
 
                     <div class="ms-1 w-75 p-1">
                       <h6 class="fw-bold mb-0">Service</h6><p class="ms-2"><%= booking.service.title %></p>
+
                       <h6 class="fw-bold mb-0">Date</h6><p class="ms-2"><%= booking.date.strftime("%F") %></p>
+
+
+
                       <!-- CHAMAR A FUNÇÃO TOTAL PRICE -->
                       <h6 class="fw-bold mb-0">Total Price</h6><p class="ms-2"> $NB <%= booking.service.price * booking.duration %></p>
+
                     </div>
 
                   </div>
@@ -158,8 +165,11 @@
         <th>Name Client</th>
         <th>Title Service</th>
         <th>Category</th>
-        <th>My Price</th>
-        <th>Request</th>
+        <th>Price</th>
+
+        <th>Status</th>
+        
+
     </thead>
 
     <tbody>
@@ -186,11 +196,18 @@
             <p class="text-muted mb-0"><%= booking.service.category %></p>
           </td>
           <td>
-            <p class="text-muted mb-0 ps-3">$NB <%= booking.service.price %></p>
+            <p class="text-muted mb-0 ps-3">€ <%= booking.service.price %></p>
           </td>
           <td>
-            <%= link_to 'Confirm', dashboard_path, data: {confirm: "Are you sure?"}, class: "btn btn-success btn-sm rounded-pill text-light" %>
+
+            <% if booking.approved? %>
+            <P>booked </P>
+            <% else %>
+              <%= link_to "click to approved",  booking_set_approved_path(booking), method: :post %>
+            <% end %>
+
           </td>
+         
         </tr>
       <% end %>
     </tbody>
