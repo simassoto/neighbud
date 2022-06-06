@@ -10,7 +10,7 @@
 
         <div class="container p-3 bg-light border rounded " style="width: 27rem; float:right;">
               <div class="col-md-12 text-center">
-                  <h3 class= "fw-bold border-bottom main-title">Dashboard</h3>
+                  <h3 class= "fw-bold border-bottom main-title">Info</h3>
 
                     <table class="table align-middle mt-3 bg-white main-title border-top: 2px solid currentColor;">
                       <thead class="table-header text-light">
@@ -25,7 +25,7 @@
                           <div class="voutcher-divider">
                             <div class="voutcher-left text-center">
                               <span class="voutcher-name"><%= @user.email %></span>
-                              <h5 class="voutcher-code">Jose<%= @user.first_name %></h5>
+                              <h5 class="voutcher-code">Cristiano Ronaldo<%= @user.first_name %></h5>
                             </div>
                             <div class="voutcher-right text-center border-left">
                               <h5 class="discount-percent">$NB 99<%= @user.wallet %></h5>
@@ -150,7 +150,7 @@
 
 <div class="container p-3 mt-5 bg-light border rounded">
 
-  <h3 class= "fw-bold border-bottom main-title">My Schedule</h3>
+  <h3 class= "fw-bold border-bottom main-title">My Services Schedule</h3>
 
   <table class="table align-middle mt-3 bg-white main-title">
     <thead class="table-header text-light">
@@ -159,7 +159,8 @@
         <th>Title Service</th>
         <th>Category</th>
         <th>My Price</th>
-        <th>Request</th>
+        <th>To reserve</th>
+        <th>To confirm</th>
     </thead>
 
     <tbody>
@@ -189,10 +190,13 @@
             <p class="text-muted mb-0 ps-3">$NB <%= booking.service.price %></p>
           </td>
           <td>
-            <%= link_to 'Confirm', dashboard_path, data: {confirm: "Are you sure?"}, class: "btn btn-success btn-sm rounded-pill text-light" %>
+            
+           <%= link_to 'Confirm', dashboard_path, data: {confirm: "Are you sure?"}, class: "btn btn-success btn-sm rounded-pill text-light" %>
           </td>
+          
         </tr>
       <% end %>
     </tbody>
   </table>
 </div>
+
