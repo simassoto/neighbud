@@ -4,10 +4,8 @@ class ServicesController < ApplicationController
   #authorize @service
 
   def index
-
-
     if params[:query].present?
-      sql_query = "title ILIKE :query OR description ILIKE :query"
+      sql_query = "title ILIKE :query OR description  ILIKE :query OR category ILIKE :query "
       @services = Service.where(sql_query, query: "%#{params[:query]}%")
     else
       @services = Service.all
