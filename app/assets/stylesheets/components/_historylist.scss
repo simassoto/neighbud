@@ -1,0 +1,8 @@
+/* Fix table head */
+.tableFixHead    { overflow: auto; height: 100px; }
+.tableFixHead th { position: sticky; top: 0; }
+
+/* Just common table stuff. */
+table  { border-collapse: collapse; width: 100%; }
+th, td { padding: 8px 16px; text-align: start;}
+th     { background:#eee; }
