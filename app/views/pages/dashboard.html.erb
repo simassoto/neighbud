@@ -166,7 +166,7 @@
   <table class="table align-middle mt-3 bg-white main-title">
     <thead class="table-header text-light">
       <tr>
-        <th>Name Client</th>
+        <th>Client Name</th>
         <th>Title Service</th>
         <th>Category</th>
         <th>Price</th>
@@ -181,15 +181,10 @@
         <tr>
           <td>
             <div class="d-flex align-items-center">
-              <img
-                  src="https://mdbootstrap.com/img/new/avatars/8.jpg"
-                  alt=""
-                  style="width: 45px; height: 45px"
-                  class="rounded-circle"
-                  />
+
               <div class="ms-3">
-                <p class="fw-bold mb-1"><%= booking.user.first_name %></p>
-                <p class="text-muted mb-0"><%= booking.user.last_name %></p>
+                <p class="fw-bold mb-1"><%= booking.user.first_name %> <%= booking.user.last_name %></p>
+                <p class="text-muted mb-0"><%= booking.user.email %></p>
               </div>
             </div>
           </td>
