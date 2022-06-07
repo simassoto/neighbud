@@ -19,6 +19,11 @@ class ServicesController < ApplicationController
         image_url: helpers.asset_url("")
       }
     end
+
+    categories = params.dig(:filter, :categories)&.reject(&:empty?) || []
+    @services = @services.where(category: categories) if categories.any?
+
+    @services = @services.where(price: ..params[:price]) if params[:price]
   end
 
    def show

@@ -15,32 +15,28 @@
               <hr>
 
               <!-- BEGIN FILTER BY CATEGORY -->
-              <h5><strong>By category:</strong></h5>
-              <div class="checkbox">
-                <label><input type="checkbox" class="icheck"> Application</label>
-              </div>
-              <div class="checkbox">
-                <label><input type="checkbox" class="icheck"> Design</label>
-              </div>
-              <div class="checkbox">
-                <label><input type="checkbox" class="icheck"> Desktop</label>
-              </div>
-              <div class="checkbox">
-                <label><input type="checkbox" class="icheck"> Management</label>
-              </div>
-              <div class="checkbox">
-                <label><input type="checkbox" class="icheck"> Mobile</label>
-              </div>
-              <!-- END FILTER BY CATEGORY -->
+              <div data-controller="filter">
+                <%= simple_form_for :filter, method: :get do |f| %>
+                  <h5><strong>By category:</strong></h5>
+                  <%= f.input :categories, as: :check_boxes,
+                    collection: Service::CATEGORIES, label: '',
+                    required: false,
+                    checked: params.dig(:filter, :categories),
+                    input_html: { data: { filter_target: 'check' } } %>
 
-              <div class="mb-3"></div>
+                  <!-- END FILTER BY CATEGORY -->
+                  <div class="mb-3"></div>
 
-              <!-- BEGIN FILTER BY PRICE -->
-              <h5><strong>By price:</strong></h5>
-              <div class="slider-primary">
-                <div class="slider slider-horizontal" style="width: 152px;"><div class="slider-track"><div class="slider-selection" style="left: 30%; width: 50%;"></div><div class="slider-handle round" style="left: 30%;"></div><div class="slider-handle round" style="left: 80%;"></div></div><div class="tooltip top hide" style="top: -30px; left: 50.1px;"><div class="tooltip-arrow"></div><div class="tooltip-inner">300 : 800</div></div><input type="text" class="slider" value="" data-slider-min="0" data-slider-max="1000" data-slider-step="1" data-slider-value="[300,800]" data-slider-tooltip="hide"></div>
+                  <!-- BEGIN FILTER BY PRICE -->
+                  <h5><strong>By price:</strong></h5>
+                  <div data-controller="price">
+                    <input type="range" data-price-target="input" class="slider" name="price" min="1" max="500" value="<%= params[:price] %>">
+                    <span data-price-target="value">0</span>
+                  </div>
+                <% end %>
               </div>
               <!-- END FILTER BY PRICE -->
+
             </div>
             <!-- END FILTERS -->
             <!-- BEGIN RESULT -->
