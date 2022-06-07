@@ -177,7 +177,7 @@
     </thead>
 
     <tbody>
-      <% @booked.each do |booking| %>
+      <% @booked.future.not_confirmed.each do |booking| %>
         <tr>
           <td>
             <div class="d-flex align-items-center">
