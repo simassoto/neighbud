@@ -1,34 +1,29 @@
 <div id="container" class="d-flex justify-content-center align-middle banner-container-home mb-4">
   <div class="main-title d-flex justify-content-center">
     <div class="col-12 row justify-content-center align-middle">
+
       <div class="col-12 d-flex justify-content-center text-centerd-block" style="align-items: end">
-        <h1 class>Find a neighboor. Find a service.</h1>
+        <h1 class>Find a neighbor. Find a service.</h1>
       </div>
+
       <div class="col-12 d-flex justify-content-center" style="align-items: end; text-align: center;">
-        <h5> Register now and earn €NB 50 to start purchasing some services from your neighbours.</h5>
+        <h5> Register now and earn $NB 50 to start purchasing services from your neighbors.</h5>
       </div>
 
-          <div class= "">
-            <%= simple_form_for :search, url: services_path, method: :get do |f| %>
-            <div class="search-form-control">
-                <%= text_field_tag :query, params[:query], class: "form-control string required" %>
-                <button name="button" type="submit" class="btn btn-secondary btn-sm table-header buttonmove">
-                <i class="fas fa-search"></i> Search
-                </button>
-                <div class="fas fa-caret-down  col-12 justify-content-center align-middle mx-auto mt-5">
-                </div>
-
-
-                <html class="buttonmove">
-                  <a class="textabout" href="#down">About us</a>
-                </html>
-
-
-
-            </div>
-            <% end %>
-
+      <div class= "">
+        <%= simple_form_for :search, url: services_path, method: :get do |f| %>
+          <div class="search-form-control">
+            <%= text_field_tag :query, params[:query], class: "form-control string required" %>
+            <button name="button" type="submit" class="btn btn-secondary btn-sm table-header buttonmove">
+            <i class="fas fa-search"></i> Search
+            </button>
+            <div class="fas fa-caret-down  col-12 justify-content-center align-middle mx-auto mt-5"></div>
+              <html class="buttonmove">
+              <a class="textabout" href="#down">About us</a>
+              </html>
           </div>
+        <% end %>
+      </div>
 
     </div>
   </div>
@@ -37,7 +32,7 @@
 <div class="d-flex justify-content-center mx-4">
 
   <div class="d-flex card-category-homepage text-center flex-column justify-content-center align-items-center grow">
-   <%= link_to services_path %>
+   <%= link_to services_path, :controller => "services", :query => "education" %>
     <i class="fa-solid fa-book-open card-icon2"></i>
     <span class="text-middle2 text-center">Education</span>
   </div>
