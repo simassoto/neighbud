@@ -31,56 +31,75 @@
 
 <div class="d-flex justify-content-center mx-4">
 
-  <div class="d-flex card-category-homepage text-center flex-column justify-content-center align-items-center grow">
-   <%= link_to services_path, :controller => "services", :query => "education" %>
-    <i class="fa-solid fa-book-open card-icon2"></i>
-    <span class="text-middle2 text-center">Education</span>
-  </div>
+  <%= link_to services_path(query: "education"), :controller => "services" do %>
+    <div class="d-flex card-category-homepage text-center flex-column justify-content-center align-items-center grow">
+      <i class="fa-solid fa-book-open card-icon2"></i>
+      <span class="text-middle2 text-center">Education</span>
+    </div>
+  <% end %>
 
-  <div class="d-flex card-category-homepage text-center flex-column justify-content-center align-items-center grow">
-    <i class="fa-solid fa-volleyball card-icon2"></i>
-    <span class="text-middle2 text-center">Sport</span>
-  </div>
+  <%= link_to services_path(query: "sport"), :controller => "services" do %>
+    <div class="d-flex card-category-homepage text-center flex-column justify-content-center align-items-center grow">
+      <i class="fa-solid fa-volleyball card-icon2"></i>
+      <span class="text-middle2 text-center">Sport</span>
+    </div>
+  <% end %>
 
-  <div class="d-flex card-category-homepage text-center flex-column justify-content-center align-items-center grow">
-    <i class="fa-solid fa-hammer card-icon2"></i>
-    <span class="text-middle2 text-center">Repairing</span>
-  </div>
+  <%= link_to services_path(query: "repairing"), :controller => "services" do %>
+    <div class="d-flex card-category-homepage text-center flex-column justify-content-center align-items-center grow">
+      <i class="fa-solid fa-hammer card-icon2"></i>
+      <span class="text-middle2 text-center">Repairing</span>
+    </div>
+  <% end %>
 
-  <div class="d-flex card-category-homepage text-center flex-column justify-content-center align-items-center grow">
-    <i class="fa-solid fa-hand-holding-heart card-icon2"></i>
-    <span class="text-middle2 text-center">Social Care</span>
-  </div>
+  <%= link_to services_path(query: "socialcare"), :controller => "services" do %>
+    <div class="d-flex card-category-homepage text-center flex-column justify-content-center align-items-center grow">
+      <i class="fa-solid fa-hand-holding-heart card-icon2"></i>
+      <span class="text-middle2 text-center">Social Care</span>
+    </div>
+  <% end %>
 
-  <div class="d-flex card-category-homepage text-center flex-column justify-content-center align-items-center grow">
-    <i class="fa-solid fa-heart-pulse card-icon2"></i>
-    <span class="text-middle2 text-center">Health Care</span>
-  </div>
+  <%= link_to services_path(query: "healthcare"), :controller => "services" do %>
+    <div class="d-flex card-category-homepage text-center flex-column justify-content-center align-items-center grow">
+      <i class="fa-solid fa-heart-pulse card-icon2"></i>
+      <span class="text-middle2 text-center">Health Care</span>
+    </div>
+  <% end %>
 
-  <div class="d-flex card-category-homepage text-center flex-column justify-content-center align-items-center grow">
-    <i class="fa-solid fa-sack-dollar card-icon2"></i>
-    <span class="text-middle2 text-center">Financial</span>
-  </div>
+  <%= link_to services_path(query: "financial"), :controller => "services" do %>
+    <div class="d-flex card-category-homepage text-center flex-column justify-content-center align-items-center grow">
+      <i class="fa-solid fa-sack-dollar card-icon2"></i>
+      <span class="text-middle2 text-center">Financial</span>
+    </div>
+  <% end %>
 
-  <div class="d-flex card-category-homepage text-center flex-column justify-content-center align-items-center grow">
-    <i class="fa-solid fa-book-open card-icon2"></i>
-    <span class="text-middle2 text-center">Maintenance</span>
-  </div>
+  <%= link_to services_path(query: "maintenance"), :controller => "services" do %>
+    <div class="d-flex card-category-homepage text-center flex-column justify-content-center align-items-center grow">
+      <i class="fa-solid fa-book-open card-icon2"></i>
+      <span class="text-middle2 text-center">Maintenance</span>
+    </div>
+  <% end %>
 
-  <div class="d-flex card-category-homepage text-center flex-column justify-content-center align-items-center grow">
-    <i class="fa-solid fa-camera card-icon2"></i>
-    <span class="text-middle2 text-center">Entertainment</span>
-  </div>
+  <%= link_to services_path(query: "entertainment"), :controller => "services" do %>
+    <div class="d-flex card-category-homepage text-center flex-column justify-content-center align-items-center grow">
+      <i class="fa-solid fa-camera card-icon2"></i>
+      <span class="text-middle2 text-center">Entertainment</span>
+    </div>
+  <% end %>
 
-  <div class="d-flex card-category-homepage text-center flex-column justify-content-center align-items-center grow">
-    <i class="fa-solid fa-apple-whole card-icon2"></i>
-    <span class="text-middle2 text-center">Food</span>
-  </div>
+  <%= link_to services_path(query: "food"), :controller => "services" do %>
+    <div class="d-flex card-category-homepage text-center flex-column justify-content-center align-items-center grow">
+      <i class="fa-solid fa-apple-whole card-icon2"></i>
+      <span class="text-middle2 text-center">Food</span>
+    </div>
+  <% end %>
 
-  <div class="d-flex card-category-homepage text-center flex-column justify-content-center align-items-center grow">
-    <i class="fa-solid fa-shuffle card-icon2"></i>
-    <span class="text-middle2 text-center">Other</span>
-  </div>
+  <%= link_to services_path(query: "other"), :controller => "services" do %>
+    <div class="d-flex card-category-homepage text-center flex-column justify-content-center align-items-center grow">
+      <i class="fa-solid fa-shuffle card-icon2"></i>
+      <span class="text-middle2 text-center">Other</span>
+    </div>
+  <% end %>
 
 </div>
 
