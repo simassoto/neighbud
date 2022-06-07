@@ -7,10 +7,11 @@ Rails.application.routes.draw do
 
   end
 
-  resources :bookings, only: [:index, :destroy]
-  resources :bookings, only:  [:show] do
-    post "set_approved", to: "bookings#set_approved"
-    post "set_confirmed", to: "bookings#set_confirmed"
+  resources :bookings, only: [:index, :destroy, :show] do
+    member do
+      post :set_approved
+      post :set_confirmed
+    end
   end
 end
 

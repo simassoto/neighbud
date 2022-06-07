@@ -9,13 +9,14 @@ class BookingsController < ApplicationController
   end
 
   def set_approved
-    @booking = Booking.find(params[:booking_id])
+    @booking = Booking.find(params[:id])
     @booking.approved!
+
     redirect_to dashboard_path
   end
 
   def set_confirmed
-    booking = Booking.find(params[:booking_id])
+    booking = Booking.find(params[:id])
     service = Service.find(booking.service_id)
 
     total_price = service.price * booking.duration
