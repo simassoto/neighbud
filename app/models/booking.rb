@@ -15,7 +15,7 @@ class Booking < ApplicationRecord
   private
 
   def wallet_money
-    if user.wallet <= service.price * duration
+    if user.wallet < service.price * duration
       errors.add(:duration, "goes over the budget")
     end
   end
