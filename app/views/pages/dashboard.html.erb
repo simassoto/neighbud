@@ -132,12 +132,15 @@
                     </div>
 
                   </div>
-                  <div class="card-footer bg-transparent border">
+                      <% if booking.approved? %>
+                      <div class="card-footer bg-transparent border">
 
-                  <%= link_to 'Delete', booking_path(booking), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-danger btn-sm rounded-pill text-light" %>
+                      <%= link_to 'Delete', booking_path(booking), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-danger btn-sm rounded-pill text-light" %>
 
-                  <%= link_to 'Done', booking_set_confirmed_path(booking), method: :post, data: {confirm: "Are you sure?"}, class: "btn btn-success btn-sm rounded-pill text-light" %>
-
+                      <%= link_to 'Done', booking_set_confirmed_path(booking), method: :post, data: {confirm: "Are you sure?"}, class: "btn btn-success btn-sm rounded-pill text-light" %>
+                      <% else %>
+                      <p>Pending Request</p>
+                      <% end %>
                   </div>
                 </div>
             </div>
@@ -246,26 +249,79 @@
             <% end %>
           </tbody>
         </table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         
       </div>
     </div>
   </div>
 </div>
+
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
+
+<tbody>
+  <% @user.bookings.confirmed.each do |booking| %>
+    <tr>
+      <td>
+        <div class="d-flex align-items-center">
+
+          <div class="ms-3">
+            <p class="fw-bold mb-1"><%= booking.user.first_name %> <%= booking.user.last_name %></p>
+            <p class="text-muted mb-0"><%= booking.user.email %></p>
+          </div>
+        </div>
+      </td>
+      <td>
+        <p class="fw-normal mb-1"><%= booking.service.title %></p>
+      </td>
+      <td>
+        <p class="text-muted mb-0"><%= booking.service.category %></p>
+      </td>
+      <td>
+        <p class="text-muted mb-0 ps-3">€ <%= booking.service.price %></p>
+      </td>
+      <td>
+
+      </td>
+
+    </tr>
+  <% end %>
+</tbody>
+</table>
+</div>
+
+
+<tbody>
+  <% Booking.where(service: Service.where(user_id: current_user), status: :confirmed).each do |booking| %>
+    <tr>
+      <td>
+        <div class="d-flex align-items-center">
+
+          <div class="ms-3">
+            <p class="fw-bold mb-1"><%= booking.user.first_name %> <%= booking.user.last_name %></p>
+            <p class="text-muted mb-0"><%= booking.user.email %></p>
+          </div>
+        </div>
+      </td>
+      <td>
+        <p class="fw-normal mb-1"><%= booking.service.title %></p>
+      </td>
+      <td>
+        <p class="text-muted mb-0"><%= booking.service.category %></p>
+      </td>
+      <td>
+        <p class="text-muted mb-0 ps-3">€ <%= booking.service.price %></p>
+      </td>
+      <td>
+
+      </td>
+
+    </tr>
+  <% end %>
+</tbody>
+</table>
+</div>
+
