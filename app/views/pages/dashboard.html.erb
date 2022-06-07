@@ -43,7 +43,7 @@
                     <table class="table align-middle mt-3 bg-white main-title border-top: 2px solid currentColor;">
                       <thead class="table-header text-light">
                       <tr>
-                        <th>My Services </th> 
+                        <th>My Services </th>
                       </tr>
                       </thead>
                     </table>
@@ -101,7 +101,7 @@
                     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
 
         <div class="row mt-3">
-          <% @user.bookings.each do |booking| %>
+          <% @user.bookings.future.not_confirmed.each do |booking| %>
             <div class="col-xl-3 mb-4 main-title">
                 <div class="card border shadow-0 mb-3 cardmove" style="width: 14rem; margin-left: -5px;">
                   <div class="p-3">

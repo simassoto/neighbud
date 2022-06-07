@@ -5,7 +5,7 @@
 
 .listservice-group-item{
 	margin-top:10px;
-	border-radius: 2px; 
+	border-radius: 2px;
 	background: #ffffff;
 	cursor: pointer;
 	transition: all 0.3s ease-in-out;
@@ -15,7 +15,7 @@
 
 a:-webkit-any-link {
     text-decoration: none;
-    cursor: auto;
+    // cursor: auto;
 }
 
 .listservice-group-item:hover{
