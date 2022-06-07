@@ -4,15 +4,15 @@ Service.destroy_all
 User.destroy_all
 
 puts "Creating new users"
-user11 = User.create!(email: "teste11@gmail.com", password: "123456" )
-user22 = User.create!(email: "teste22@gmail.com", password: "123456" )
-user33 = User.create!(email: "teste33@gmail.com", password: "123456" )
-user44 = User.create!(email: "teste44@gmail.com", password: "123456" )
-user55 = User.create!(email: "teste55@gmail.com", password: "123456" )
-user66 = User.create!(email: "teste66@gmail.com", password: "123456" )
-user77 = User.create!(email: "teste77@gmail.com", password: "123456" )
-user88 = User.create!(email: "teste88@gmail.com", password: "123456" )
-user99 = User.create!(email: "teste99@gmail.com", password: "123456" )
+user11 = User.create!(first_name: "Sayonara", last_name: "Almeida", email: "teste11@gmail.com", password: "123456" )
+user22 = User.create!(first_name: "Rodrigo", last_name: "Nóbrega", email: "teste22@gmail.com", password: "123456" )
+user33 = User.create!(first_name: "Carlos", last_name: "Soto", email: "teste33@gmail.com", password: "123456" )
+user44 = User.create!(first_name: "Diogo", last_name: "Telo", email: "teste44@gmail.com", password: "123456" )
+user55 = User.create!(first_name: "Ricardo", last_name: "Silva", email: "teste55@gmail.com", password: "123456" )
+user66 = User.create!(first_name: "Dom", last_name: "Henrique", email: "teste66@gmail.com", password: "123456" )
+user77 = User.create!(first_name: "Miguelito", last_name: "Primeiro", email: "teste77@gmail.com", password: "123456" )
+user88 = User.create!(first_name: "Raimundo", last_name: "Contoler", email: "teste88@gmail.com", password: "123456" )
+user99 = User.create!(first_name: "Marta", last_name: "Nunes", email: "teste99@gmail.com", password: "123456" )
 
 puts "Making new services..."
 service1 = Service.create!(
