@@ -14,13 +14,18 @@
 
       <div class="col-12 d-flex justify-content-center text-centerd-block" style="align-items: end">
 
-        <div style="margin-left: 0rem;"><h1>Find a neighbor. Find a service.</h1></div>
+        <div style="margin-left: 0rem;"><h1 class = "fontes">Find a neighbor. Find a service.</h1></div>
+
+
+       
       </div>
+
 
 
 
         <div class= "">
           <%= simple_form_for :search, url: services_path, method: :get do |f| %>
+
           <div class="search-form-control fontes d-flex">
             <%= text_field_tag :query, params[:query], class: "form-control string required" %>
             <button name="button" type="submit" class="btn-secondary btn-sm table-header buttonmove">
@@ -32,7 +37,8 @@
 
           <div class="col-12 d-flex justify-content-center mt-5" style="align-items: end; text-align: center;">
 
-            <h5> Register now and earn $NB 50 to start purchasing services from your neighbors.</h5>
+            <h5 class="fontes" > Register now and earn $NB 50 to start purchasing services from your neighbors.</h5>
+
           </div>
 
       </div>
@@ -120,7 +126,11 @@
   <h1 class="about-title display-3 d-flex justify-content-center align-middle" style="margin-top: 130px;">How it works</h1>
   <div id="down" class="container d-flex justify-content-center align-middle mt-5">
 
-    <div class="container mb-2 border-bottom">
+
+
+    <div class="container mb-2 border-top border-bottom">
+
+
 
         <div class="row g-2">
 
@@ -137,8 +147,8 @@
                           style="width: 200px; height: 200px, position: absolute;"
                           class="rounded-circle align-items-center"
                         />
-                        <h6 class="main-title ">Log in</h6>
-                        <p class="main-title ">login and enjoy the application.</p>
+                        <h6 class="main-title fontes ">Log in</h6>
+                        <p class="main-title fontes ">login and enjoy the application</p>
 
                       </div>
 
@@ -151,8 +161,10 @@
                           style="width: 150px; height: 150px, position: absolute;"
                           class="rounded-circle align-items-center"
                         />
-                        <h6 class="main-title ">Choose the service</h6>
-                        <p class="main-title ">filter and choose a service from a neighbor</p>
+
+                        <h6 class="main-title fontes ">Choose the service</h6>
+                        <p class="main-title fontes ">filter and choose a service from a neighbor</p>
+
                       </div>
 
                         <p class="align-items-center" style="margin-top:5%; width: 100px; height: 100px,"><i class="fas fa-arrow-alt-circle-right"></i></p>
@@ -166,7 +178,9 @@
                           class="rounded-circle align-items-center"
                         />
                         <h6 class="main-title ">Book the service</h6>
-                        <p class="main-title ">Sbook the service and wait for confirmation from the other user.</p>
+
+                        <p class="main-title ">book the service and wait for confirmation from the other user</p>
+
                       </div>
 
                         <p class="align-items-center" style="margin-top:5%; width: 100px; height: 100px,"><i class="fas fa-arrow-alt-circle-right"></i></p>
@@ -179,7 +193,9 @@
                           class="rounded-circle align-items-center"
                         />
                         <h6 class="main-title ">Do the Job</h6>
-                        <p class="main-title ">do the work on the day and time scheduled between the users.</p>
+
+                        <p class="main-title ">do the work on the day and time scheduled between the users</p>
+
                       </div>
 
                         <p class="align-items-center" style="margin-top:5%; width: 100px; height: 100px,"><i class="fas fa-arrow-alt-circle-right"></i></p>
@@ -192,7 +208,9 @@
                           class="rounded-circle align-items-center"
                         />
                         <h6 class="main-title ">Pay your Neighbud</h6>
-                        <p class="main-title ">After the work is done, confirm the credit transfer on your dashboard.</p>
+
+                        <p class="main-title ">After the work is done, confirm the credit transfer on your dashboard</p>
+
                       </div>
 
                     </div>
@@ -215,6 +233,8 @@
   <h1 class="about-title display-3 d-flex justify-content-center align-middle" style="margin-top: 130px;">About my team</h1>
   <div id="down" class="container d-flex justify-content-center align-middle mt-5">
 
+
+
     <div class="container mb-5 border-bottom">
 
         <div class="row g-2">
@@ -224,15 +244,20 @@
                     <div class="user-image ">
 
                 <img src="https://res.cloudinary.com/student-le-wagon/image/upload/v1654705922/Neighbud%20images/T02NE0241-U03BQBN8L0G-fa4cf6003167-512_v1na2j-Circle_fyzwfj.jpg" class="rounded-circle" width="150"
+
                         >
 
                     </div>
 
-                    <div class="user-content">
 
+                    
+                    <div class="user-content fontes">
+                        
                         <h4 class="mb-0 mt-3">Carlos Soto</h4>
                         <span>Professional Videographer | fullstack Developer</span>
                         <p>Carlos Soto Videographer professional with 6 years background and new fullstack Developer, focused in back-end. </p>
+                        
+
 
                     </div>
 
@@ -240,45 +265,58 @@
             </div>
 
             <div class="col-md-4">
+
                 <div class="cardperfil text-center">
 
                     <div class="user-image">
 
                 <img src="https://res.cloudinary.com/student-le-wagon/image/upload/v1654706013/Neighbud%20images/WhatsApp_Image_2022-05-23_at_11.11.23_xv6rq3-Circle_qlze8v.jpg" class="rounded-circle" width="150"
+
                         >
 
                     </div>
 
-                    <div class="user-content">
 
+                    
+                    <div class="user-content fontes">
+                        
                         <h4 class="mb-0 mt-3">Rodrigo Nóbrega</h4>
                         <span>Mechanical Engineer | fullstack Developer | Outsystems Developer</span>
                         <p>Rodrigo Nóbrega is a mechanical engineer, with experience in the manufacturing industry. he is an outsystems developer and the newest fullstack developer. frontend focused.</p>
-
+                        
                     </div>
 
                 </div>
+
             </div>
 
             <div class="col-md-4">
+
                 <div class="cardperfil text-center">
 
                     <div class="user-image">
 
                 <img src="https://res.cloudinary.com/student-le-wagon/image/upload/v1654705779/Neighbud%20images/eu_td4ywe-Circle_jeqg91.jpg" class="rounded-circle" width="150"
+
                         >
 
                     </div>
 
-                    <div class="user-content">
+            <p>Sayonara Almeida is a Architect and new fullstack Developer, focused in back-end.</p>
 
+                    
+                    <div class="user-content fontes">
+                        
                         <h4 class="mb-0 mt-3">Sayonara Almeida</h4>
-                        <span>Architect | fullstack Developer</span>
-                        <p>Sayonara Almeida is a Architect and new fullstack Developer, focused in back-end.</p>
+                        <span>Architect | Fullstack Developer</span>
+                        <p>Sayonara Almeida is an Architect and new fullstack Developer, focused in back-end.</p>
+                        
+
 
                     </div>
 
                 </div>
+
             </div>
 
 
