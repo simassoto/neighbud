@@ -1,11 +1,11 @@
-<h1 class="p-3 text-center fw-bold main-title mb-2">Hey Neighbud, Find your service</h1>
+<h1 class="p-3 text-center fw-bold main-title mb-2">Hey Neighbud, search for a service </h1>
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 
 
 <div class="container">
   <div class="row">
     <!-- BEGIN SEARCH RESULT -->
-    <div class="col-md-12">
+    <div class="col-md-12 fontes">
       <div class="grid search bg-light p-3 border rounded">
         <div class="grid-body">
           <div class="row">
@@ -17,8 +17,8 @@
               <!-- BEGIN FILTER BY CATEGORY -->
               <div data-controller="filter">
                 <%= simple_form_for :filter, method: :get do |f| %>
-                  <h5><strong>By category:</strong></h5>
-                  <%= f.input :categories, as: :check_boxes,
+                  <h5 class= "fontes" ><strong>By category:</strong></h5>
+                  <%= f.input :categories, as: :check_boxes, class: "fontes",
                     collection: Service::CATEGORIES, label: '',
                     required: false,
                     checked: params.dig(:filter, :categories),
@@ -28,7 +28,7 @@
                   <div class="mb-3"></div>
 
                   <!-- BEGIN FILTER BY PRICE -->
-                  <h5><strong>By price:</strong></h5>
+                  <h5 class = "fontes" ><strong>By price:</strong></h5>
                   <div class="slidecontainer" data-controller="price">
                     <input type="range" data-price-target="input" class="slider" name="price" min="1" max="500" value="<%= params[:price] %>">
                     <span data-price-target="value">$NB 0</span>
@@ -62,7 +62,7 @@
               <!-- MAP -->
 
               <!-- END SEARCH INPUT -->
-              <h5><strong>List Results</strong></h5>
+              <h5><strong>Results</strong></h5>
 
                 <!-- END ORDER RESULT -->
 
