@@ -9,9 +9,9 @@
 
       <div class= "">
         <%= simple_form_for :search, url: services_path, method: :get do |f| %>
-          <div class="search-form-control fontes">
+          <div class="search-form-control fontes d-flex">
             <%= text_field_tag :query, params[:query], class: "form-control string required" %>
-            <button name="button" type="submit" class="btn btn-secondary btn-sm table-header buttonmove">
+            <button name="button" type="submit" class="btn-secondary btn-sm table-header buttonmove">
             <i class="fas fa-search"></i> Search
             </button>
 
@@ -125,7 +125,7 @@
                           class="rounded-circle align-items-center"
                         />
                         <h6 class="main-title fontes ">Log in</h6>
-                        <p class="main-title fontes ">login and enjoy the application.</p>
+                        <p class="main-title fontes ">login and enjoy the application</p>
 
                       </div>
 
@@ -153,7 +153,7 @@
                           class="rounded-circle align-items-center"
                         />
                         <h6 class="main-title ">Book the service</h6>
-                        <p class="main-title ">Sbook the service and wait for confirmation from the other user.</p>
+                        <p class="main-title ">book the service and wait for confirmation from the other user</p>
                       </div>
 
                         <p class="align-items-center" style="margin-top:5%; width: 100px; height: 100px,"><i class="fas fa-arrow-alt-circle-right"></i></p>
@@ -166,7 +166,7 @@
                           class="rounded-circle align-items-center"
                         />
                         <h6 class="main-title ">Do the Job</h6>
-                        <p class="main-title ">do the work on the day and time scheduled between the users.</p>
+                        <p class="main-title ">do the work on the day and time scheduled between the users</p>
                       </div>
 
                         <p class="align-items-center" style="margin-top:5%; width: 100px; height: 100px,"><i class="fas fa-arrow-alt-circle-right"></i></p>
@@ -179,7 +179,7 @@
                           class="rounded-circle align-items-center"
                         />
                         <h6 class="main-title ">Pay your Neighbud</h6>
-                        <p class="main-title ">After the work is done, confirm the credit transfer on your dashboard.</p>
+                        <p class="main-title ">After the work is done, confirm the credit transfer on your dashboard</p>
                       </div>
 
                     </div>
