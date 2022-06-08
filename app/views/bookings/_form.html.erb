@@ -1,15 +1,46 @@
-<div class="row d-flex justify-content-center pt-5">
-  <div class="col-4">
-    <div class="flat-form2" data-controller="flatpickr">
-      <%= simple_form_for [@service, @booking] do |f| %>
-        <div class="flat-form2">
-          <%= f.label "Set the date you need this service to be done" %>
-          <%= f.input :date, label: false, placeholder: "Date", as: :string, required: false, input_html: {class: "form-nice-class datepicker"} %>
-          <%= f.label "Duration in hours" %>
-          <%= f.input :duration, label: false, placeholder: "Duration", :input_html => { class: "form-nice-class", min: '1', value: "1" }  %>
-          <%= f.submit "Submit the booking" %>
+<div class="container p-3 bg-light border mt-2 main-title" style="width: 40rem; border-radius: 25px;">
+  <h2 class="main-title ">Book this service</h2>
+
+  <img
+    src="https://t3.ftcdn.net/jpg/02/44/58/20/360_F_244582094_BTflxzaxlNDHk250JiOaPwAeC4487ns8.jpg"
+    alt=""
+    style="width: 350px; height: 350px, position: absolute; margin-left: 140px;"
+    class="rounded-circle align-items-center"
+  />
+
+
+  <div class="row">
+    <div class="col-12 d-flex justify-content-center text-center">
+        <div class= "data-card2">
+
+
+          <div class="row d-flex justify-content-center pt-3">
+            <div class="col-12">
+              <div class="flat-form2" data-controller="flatpickr">
+                <%= simple_form_for [@service, @booking] do |f| %>
+                  <div class="flat-form2">
+                    <%= f.label "Set the date you need this service to be done" %>
+                    <%= f.input :date, label: false, placeholder: "Date", as: :string, required: false, input_html: {class: "form-nice-class datepicker"} %>
+                    <%= f.label "Duration in hours" %>
+                    <%= f.input :duration, label: false, placeholder: "Duration", :input_html => { class: "form-nice-class", min: '1', value: "1" }  %>
+                    <%= f.submit "Submit the booking", class: 'btn btn-success btn-block w-100 p-2 mt-2 border mb-5' %>
+                  </div>
+                <% end %>
+
+                    <div class="form-actions">
+                      <%= link_to 'Go Back to Home page', root_path, class: 'btn btn-outline-dark btn-block w-100 p-2 border'%>
+                    </div>
+
+                    <div class="form-actions">
+                      <%= link_to "Go Back to your Dashboard", dashboard_path, class: 'btn btn-outline-dark btn-block w-100 p-2 border'%>
+                    </div>
+              </div>
+            </div>
+          </div>
+
+
         </div>
-      <% end %>
+
     </div>
   </div>
 </div>

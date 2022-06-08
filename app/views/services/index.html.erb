@@ -6,7 +6,7 @@
   <div class="row">
     <!-- BEGIN SEARCH RESULT -->
     <div class="col-md-12">
-      <div class="grid search">
+      <div class="grid search bg-light p-3 border rounded">
         <div class="grid-body">
           <div class="row">
             <!-- BEGIN FILTERS -->
@@ -37,17 +37,16 @@
               </div>
               <!-- END FILTER BY PRICE -->
 
-            </div>
+            </div> 
             <!-- END FILTERS -->
             <!-- BEGIN RESULT -->
-            <div class="col-md-9 mt-4">
+            <div class="col-md-9">
+            <h5 class="grid-title"><i class="fa fa-map-marker-alt"></i> Map</h5>
               <hr>
               <!-- BEGIN SEARCH INPUT -->
               <div class="input-group mb-3">
-                <input type="text" class="form-control" value="" placeholder="Search">
-                <span class="input-group-btn">
-                  <button class="btn btn-primary" type="button"><i class="fa fa-search"></i></button>
-                </span>
+                <input type="text" class="form-control" style="border-radius: 5px;" value="" placeholder="Search">
+                  <button class="btn-primary ms-1" style="width: 50px; border-radius: 5px; background-color: #7e2bb6; border-color: #7e2bb6;" type="button"><i class="text-light fa fa-search"></i></button>
               </div>
 
               <!-- MAP -->
@@ -81,7 +80,7 @@
                                     <li class="table-row d-flex">
                                       <div class="image col col-1"><img src="https://via.placeholder.com/400x300/FF8C00" alt=""></div>
                                       <div class="col col-2 product"><strong><%= service.title %></strong><br><%= service.description %></div>
-                                      <div class="col col-3 price text-right fs-6" data-label="Amount">$NB <%= service.price %></div>
+                                      <div class="col col-3 fs-6 text-center" data-label="Amount">$NB <%= service.price %></div>
                                     </li>
                                   <% end %>
                                 <% end %>
