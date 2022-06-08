@@ -1,5 +1,5 @@
 <div class="container p-3 bg-light border mt-2 main-title" style="width: 40rem; border-radius: 25px;">
-  <h2 class="main-title ">Edit service</h2>
+  <h2 class="main-title fontes">Edit service</h2>
   <img
     src="https://img.freepik.com/vetores-gratis/popularidade-do-usuario-da-rede-social-avaliacao-de-fotos-indicador-de-atividade-quantidade-de-likes-numero-de-avaliacoes-positivas-e-negativas-avatar-foto-de-perfil_335657-2969.jpg"
     alt=""
@@ -7,7 +7,7 @@
     class="rounded-circle align-items-center"
   />
 
-  <div class="row">
+  <div class="row fontes">
     <div class="col-12 d-flex justify-content-center text-center">
       <div class= "data-card2">
               <%= simple_form_for(@service) do |f| %>
@@ -38,22 +38,22 @@
                   </div>
 
                   <div class="flat-form2">
-                    <%= f.submit 'Edit the service', class: 'btn btn-success btn-block w-100 p-2' %>
+                    <%= f.submit 'Submit', class: 'btn btn-success btn-block w-100 p-2' %>
                   </div>
                 </div>
               <% end %>
 
             <div class="form-actions">
-                  <%= link_to 'Delete service', service_path, method: :delete, data: {confirm: "Are you sure?"}, class: 'btn btn-outline-danger btn-block w-100 p-2' %>
+                  <%= link_to 'Delete', service_path, method: :delete, data: {confirm: "Are you sure?"}, class: 'btn btn-outline-danger btn-block w-100 p-2' %>
             </div>
 
 
             <div class="form-actions">
-              <%= link_to 'Go Back to Home page', root_path, class: 'btn btn-outline-dark btn-block w-100 p-2'%>
+              <%= link_to 'Home page', root_path, class: 'btn btn-outline-dark btn-block w-100 p-2'%>
             </div>
 
              <div class="form-actions">
-              <%= link_to "Go Back to your Dashboard", dashboard_path, class: 'btn btn-outline-dark btn-block w-100 p-2'%>
+              <%= link_to "Dashboard", dashboard_path, class: 'btn btn-outline-dark btn-block w-100 p-2'%>
             </div>
 
       </div>
