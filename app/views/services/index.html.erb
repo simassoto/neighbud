@@ -29,15 +29,15 @@
 
                   <!-- BEGIN FILTER BY PRICE -->
                   <h5><strong>By price:</strong></h5>
-                  <div data-controller="price">
+                  <div class="slidecontainer" data-controller="price">
                     <input type="range" data-price-target="input" class="slider" name="price" min="1" max="500" value="<%= params[:price] %>">
-                    <span data-price-target="value">0</span>
+                    <span data-price-target="value">$NB 0</span>
                   </div>
                 <% end %>
               </div>
               <!-- END FILTER BY PRICE -->
 
-            </div> 
+            </div>
             <!-- END FILTERS -->
             <!-- BEGIN RESULT -->
             <div class="col-md-9">

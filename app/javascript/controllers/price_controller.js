@@ -4,10 +4,10 @@ export default class extends Controller {
   static targets = ['input', 'value'];
 
   connect() {
-    this.valueTarget.innerHTML = this.inputTarget.value;
+    this.valueTarget.innerHTML = `$NB ${this.inputTarget.value}`;
 
     this.inputTarget.addEventListener('input', (event) => {
-      this.valueTarget.innerHTML = event.target.value;
+      this.valueTarget.innerHTML = `$NB ${event.target.value}`;
     })
 
     this.inputTarget.addEventListener('change', (event) => {
