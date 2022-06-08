@@ -16,10 +16,9 @@ class ServicesController < ApplicationController
         lat: service.latitude,
         lng: service.longitude,
         info_window: render_to_string(partial: "info_window", locals: { service: service }),
-        image_url: helpers.asset_url("")
+        image_url: helpers.asset_url("#{service.category}.png")
       }
     end
-
     categories = params.dig(:filter, :categories)&.reject(&:empty?) || []
     @services = @services.where(category: categories) if categories.any?
 
