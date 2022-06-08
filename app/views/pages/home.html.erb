@@ -2,19 +2,10 @@
   <div class="main-title d-flex justify-content-center">
     <div class="col-12 row justify-content-center align-middle">
 
-
-
       <div class="col-12 d-flex justify-content-center text-centerd-block" style="align-items: end">
-        
         <div style="margin-left: 0rem;"><h1>Find a neighbor. Find a service.</h1></div>
-
       </div>
 
-
-
-      <div class="col-12 d-flex justify-content-center" style="align-items: end; text-align: center;">
-        <h5> Register now and earn $NB 50 to start purchasing services from your neighbors.</h5>
-      </div>
 
       <div class= "">
         <%= simple_form_for :search, url: services_path, method: :get do |f| %>
@@ -26,8 +17,12 @@
             
           </div>
         <% end %>
-      </div>
 
+          <div class="col-12 d-flex justify-content-center mt-5" style="align-items: end; text-align: center;">
+            <h5> Register now and earn $NB 50 to start purchasing services from your neighbors.</h5>
+          </div>
+
+      </div>
     </div>
   </div>
 </div>
@@ -107,26 +102,203 @@
 </div>
 
 
+<!-- How it Works -->
+
+  <h1 class="about-title display-2 mt-5 d-flex justify-content-center align-middle">How it works</h1>
+  <div id="down" class="container d-flex justify-content-center align-middle mt-5">
+
+    <div class="container mb-2 border-top border-bottom">
+        
+        <div class="row g-2">
+            
+            <div class="col-md-12">
+                
+                <div class="cardperfil p-3 text-center px-4">
+                    
+                    
+                    <div class="user-content d-flex justify-content-center">
+                      <div class="justify-content-center align-middle">
+                        <img
+                          src="https://res.cloudinary.com/student-le-wagon/image/upload/v1654697912/Neighbud%20images/undraw_secure_login_pdn4_bg6kx4.png"
+                          alt=""
+                          style="width: 200px; height: 200px, position: absolute;"
+                          class="rounded-circle align-items-center"
+                        />
+                        <h6 class="main-title ">Log in</h6>
+                        <p class="main-title ">login and enjoy the application.</p>
+
+                      </div>     
+
+                        <p class="align-items-center" style="margin-top:5%; width: 100px; height: 100px,"><i class="fas fa-arrow-alt-circle-right"></i></p>
+
+                      <div class="justify-content-center align-middle">
+                        <img
+                          src="https://res.cloudinary.com/student-le-wagon/image/upload/v1654697912/Neighbud%20images/undraw_Choose_re_7d5a_cvkmnt.png"
+                          alt=""
+                          style="width: 150px; height: 150px, position: absolute;"
+                          class="rounded-circle align-items-center"
+                        />
+                        <h6 class="main-title ">Choose the service</h6>
+                        <p class="main-title ">filter and choose a service from a neighbor</p>
+                      </div> 
+
+                        <p class="align-items-center" style="margin-top:5%; width: 100px; height: 100px,"><i class="fas fa-arrow-alt-circle-right"></i></p>
+
+
+                      <div class="justify-content-center align-middle">
+                        <img
+                          src="https://res.cloudinary.com/student-le-wagon/image/upload/v1654697912/Neighbud%20images/undraw_Booking_re_gw4j_tjcxvh.png"
+                          alt=""
+                          style="width: 212px; height: 212px, position: absolute;"
+                          class="rounded-circle align-items-center"
+                        />
+                        <h6 class="main-title ">Book the service</h6>
+                        <p class="main-title ">Sbook the service and wait for confirmation from the other user.</p>
+                      </div> 
+
+                        <p class="align-items-center" style="margin-top:5%; width: 100px; height: 100px,"><i class="fas fa-arrow-alt-circle-right"></i></p>
+
+                      <div class="justify-content-center align-middle">
+                        <img
+                          src="https://res.cloudinary.com/student-le-wagon/image/upload/v1654697912/Neighbud%20images/undraw_QA_engineers_dg5p_lwhflf.png"
+                          alt=""
+                          style="width: 200px; height: 200px, position: absolute;"
+                          class="rounded-circle align-items-center"
+                        />
+                        <h6 class="main-title ">Do the Job</h6>
+                        <p class="main-title ">do the work on the day and time scheduled between the users.</p>
+                      </div> 
+
+                        <p class="align-items-center" style="margin-top:5%; width: 100px; height: 100px,"><i class="fas fa-arrow-alt-circle-right"></i></p>
+
+                      <div class="justify-content-center align-middle">
+                        <img
+                          src="https://res.cloudinary.com/student-le-wagon/image/upload/v1654697912/Neighbud%20images/undraw_Online_payments_re_y8f2_pobuu1.png"
+                          alt=""
+                          style="width: 220px; height: 220px, position: absolute;"
+                          class="rounded-circle align-items-center"
+                        />
+                        <h6 class="main-title ">Pay your Neighbud</h6>
+                        <p class="main-title ">After the work is done, confirm the credit transfer on your dashboard.</p>
+                      </div>  
+
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+            
+        </div>
+        
+    </div>
+ </div>   
+
+
+
+
 <!-- ABOUT US -->
 
+  <h1 class="about-title display-3 mt-5 d-flex justify-content-center align-middle">About us</h1>
+  <div id="down" class="container d-flex justify-content-center align-middle mt-5">
 
-
-<!-- 
-
-
-
-<div id="down" class="container d-flex justify-content-center align-middle mt-5">
-
-    <div>
-      <h1 class="about-title display-2 mt-5 d-flex justify-content-center align-middle">About us</h1>
-
-        <p class= "container d-flex justify-content-center align-middle main-title" style="width: 55rem; text-align: center;">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-        It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-        It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-        </p>
-
+    <div class="container mt-5 mb-5">
+        
+        <div class="row g-2">
+            <div class="col-md-4">
+                <div class="cardperfil p-3 text-center px-4">
+                    
+                    <div class="user-image">
+                        
+                <img src="https://i.imgur.com/PKHvlRS.jpg" class="rounded-circle" width="80"
+                        >
+                        
+                    </div>
+                    
+                    <div class="user-content">
+                        
+                        <h5 class="mb-0">Bruce Hardy</h5>
+                        <span>Software Developer</span>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        
+                    </div>
+                    
+                    <div class="ratings">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                
+                <div class="cardperfil p-3 text-center px-4">
+                    
+                    <div class="user-image">
+                        
+                <img src="https://i.imgur.com/w2CKRB9.jpg" class="rounded-circle" width="80"
+                        >
+                        
+                    </div>
+                    
+                    <div class="user-content">
+                        
+                        <h5 class="mb-0">Mark Smith</h5>
+                        <span>Web Developer</span>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        
+                    </div>
+                    
+                    <div class="ratings">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+            <div class="col-md-4">
+                
+                <div class="cardperfil p-3 text-center px-4">
+                    
+                    <div class="user-image">
+                        
+                <img src="https://i.imgur.com/ACeArwY.jpg" class="rounded-circle" width="80"
+                        >
+                        
+                    </div>
+                    
+                    <div class="user-content">
+                        
+                        <h5 class="mb-0">Veera  Duncan</h5>
+                        <span>Software Architect</span>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        
+                    </div>
+                    
+                    <div class="ratings">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+            
+        </div>
+        
     </div>
-
-</div>    -->
-
+ </div>   
