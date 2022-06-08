@@ -37,7 +37,7 @@
               </div>
               <!-- END FILTER BY PRICE -->
 
-            </div> 
+            </div>
             <!-- END FILTERS -->
             <!-- BEGIN RESULT -->
             <div class="col-md-9">
@@ -78,7 +78,7 @@
                                 <% @services.each do |service| %>
                                   <%= link_to service_path(service) do %>
                                     <li class="table-row d-flex">
-                                      <div class="image col col-1"><img src="https://via.placeholder.com/400x300/FF8C00" alt=""></div>
+                                      <div class="image col col-1"><img src="assets/<%= service.category %>.png" alt=""></div>
                                       <div class="col col-2 product"><strong><%= service.title %></strong><br><%= service.description %></div>
                                       <div class="col col-3 fs-6 text-center" data-label="Amount">$NB <%= service.price %></div>
                                     </li>
