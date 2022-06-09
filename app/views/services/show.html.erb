@@ -15,18 +15,14 @@
                       </div>
                     </div>
 
-                    <a class="card-action" href="#"><i class="fa fa-heart"></i></a>
-
-                         <%= @service.user.first_name %> <%= @service.user.last_name %>
-
                     <div class="card-heading">
                         <%= @service.title %> - <%= @service.category %>
                     </div>
                     <div class="card-text">
                         <%= @service.description %>
                     </div>
-                   <div class="card-text">
-                        $NB <%= @service.price %>/h
+                   <div class="card-text"> 
+                        $NB <%= @service.price %>/h <p style="float: right;"><%= @service.user.first_name %> <%= @service.user.last_name %></p>
                     </div>
 
                     <% unless @service.user == current_user %>
