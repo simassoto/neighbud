@@ -151,6 +151,8 @@
                 <% if booking.approved? %>
                   <div class="text-center fontes">
 
+                  <h5>Booking confirmed</h5>
+
                     <%= link_to 'Cancel' , booking_path(booking), method: :delete, data: {confirm: "Are you sure you want to cancel the service?" },
                       class: "btn btn-danger btn-sm rounded-pill border" %>
 
