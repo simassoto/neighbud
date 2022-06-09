@@ -216,7 +216,7 @@
                     <%= booking.date.strftime("%F") %>
                   </td>
                   <td class="text-end font-monospace text-<%= booking.user == current_user ? 'danger' : 'success' %>">
-                    <%= booking.user==current_user ? '-' : '+' %>$NB <%= booking.service.price %>
+                    <%= booking.user==current_user ? '-' : '+' %>$NB <%= booking.service.price * booking.duration %>
                   </td>
                 </tr>
                 <% end %>
