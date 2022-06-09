@@ -17,9 +17,11 @@
           <li class="nav-item active">
             <%= link_to "Home", root_path, class: "nav-link me-3 navMenu" %>
           </li>
+
           <li class="nav-item">
-            <%= link_to "My Dashboard", dashboard_path, class: "nav-link me-3" %>
-          </li>
+           <%= link_to "My Dashboard", dashboard_path, class: "nav-link me-3" %>
+          </li> 
+
           <li class="nav-item">
             <%= link_to "My Profile", edit_user_registration_path(current_user), class: "nav-link me-3" %>
           </li>

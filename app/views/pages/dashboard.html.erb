@@ -151,6 +151,9 @@
                 <% if booking.approved? %>
                   <div class="text-center fontes">
 
+
+                  <p>Booking confirmed</p>
+
                     <%= link_to 'Cancel' , booking_path(booking), method: :delete, data: {confirm: "Are you sure you want to cancel the service?" },
                       class: "btn btn-danger btn-sm rounded-pill border" %>
 
@@ -237,8 +240,8 @@
           <tr>
             <th>Client Name</th>
             <th>Title Service</th>
-            <th>Category</th>
-            <th>Price</th>
+            <th>Date</th>
+            <th>Duration</th>
             <th class="text-center">Status</th>
 
 
@@ -265,11 +268,11 @@
               </td>
               <td>
                 <p class="fw-normal mb-1">
-                  <%= booking.service.category %>
+                  <%= booking.date %>
                 </p>
               </td>
               <td>
-                <p class="fw-normal mb-1">$NB <%= booking.service.price %>
+                <p class="fw-normal mb-1">Hours<%= booking.duration %>
                 </p>
               </td>
               <td class="text-center">

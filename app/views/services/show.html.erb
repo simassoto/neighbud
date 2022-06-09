@@ -16,13 +16,16 @@
                     </div>
 
                     <a class="card-action" href="#"><i class="fa fa-heart"></i></a>
+
+                         <%= @service.user.first_name %> <%= @service.user.last_name %>
+
                     <div class="card-heading">
                         <%= @service.title %> - <%= @service.category %>
                     </div>
                     <div class="card-text">
                         <%= @service.description %>
                     </div>
-                    <div class="card-text">
+                   <div class="card-text">
                         $NB <%= @service.price %>/h
                     </div>
 
