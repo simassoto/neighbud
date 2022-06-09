@@ -63,7 +63,7 @@ service5 = Service.create!(
 service6 = Service.create!(
   title: "Acompanhante de running",
   description: "Faço companhia na corrida",
-  category: "Sport",
+  category: "Sports",
   address: "Av. Marquês de Pombal, 66, Lisboa",
   price: 11,
   user: user66,
