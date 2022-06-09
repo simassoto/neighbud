@@ -11,6 +11,11 @@ class ServicesController < ApplicationController
       @services = Service.all
     end
 
+    categories = params.dig(:filter, :categories)&.reject(&:empty?) || []
+    @services = @services.where(category: categories) if categories.any?
+
+    @services = @services.where(price: ..params[:price]) if params[:price]
+
     @markers = @services.geocoded.map do |service|
       {
         lat: service.latitude,
@@ -19,10 +24,6 @@ class ServicesController < ApplicationController
         image_url: helpers.asset_url("#{service.category}.png")
       }
     end
-    categories = params.dig(:filter, :categories)&.reject(&:empty?) || []
-    @services = @services.where(category: categories) if categories.any?
-
-    @services = @services.where(price: ..params[:price]) if params[:price]
   end
 
    def show
