@@ -275,9 +275,9 @@
               <td class="text-center">
 
                 <% if booking.approved? %>
-                  <p class="btn btn-success disabled rounded-pill border">booked </p>
+                  <p class="fontes"> <strong>Booked!</strong> </p>
                   <% else %>
-                    <%= link_to "click to approve" , set_approved_booking_path(booking), method: :post,
+                    <%= link_to "Accept" , set_approved_booking_path(booking), method: :post,
                       class: "btn btn-warning rounded-pill border" %>
                       <% end %>
 

@@ -1,7 +1,7 @@
 <div class="container p-3 bg-light border mt-2" style="width: 40rem; border-radius: 25px;">
-  <h2 class="main-title ">Log in</h2>
+  <h2 class="main-title fontes ">Log in</h2>
   <img
-    src="https://www.yuvaacademy.in/assets/images/login.png"
+    src="https://res.cloudinary.com/student-le-wagon/image/upload/v1654781966/Neighbud%20images/undraw_Access_account_re_8spm_drroq5.png"
     alt=""
     style="width: 300px; height: 300px, position: absolute; margin-left: 140px;"
     class="rounded-circle align-items-center"
@@ -10,7 +10,7 @@
   <div class="row">
     <div class="col-12 d-flex justify-content-center text-center">
           <div class= "data-card2">
-            
+
               <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
                 <div class="form-inputs" style="width: 20rem;">
                   <%= f.input :email,
@@ -29,7 +29,7 @@
 
               <%= render "devise/shared/links" %>
           </div>
-          
+
     </div>
   </div>
 </div>
