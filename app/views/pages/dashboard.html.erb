@@ -151,10 +151,10 @@
                 <% if booking.approved? %>
                   <div class="text-center fontes">
 
-                    <%= link_to 'Delete' , booking_path(booking), method: :delete, data: {confirm: "Are you sure you want to cancel the service?" },
+                    <%= link_to 'Cancel' , booking_path(booking), method: :delete, data: {confirm: "Are you sure you want to cancel the service?" },
                       class: "btn btn-danger btn-sm rounded-pill border" %>
 
-                      <%= link_to 'Done' , set_confirmed_booking_path(booking), method: :post, data:
+                      <%= link_to 'Concluded' , set_confirmed_booking_path(booking), method: :post, data:
                         {confirm: "Proceed to payment?" }, class: "btn btn-success btn-sm rounded-pill border" %>
                         <% else %>
                           <span style="display: flex; justify-content: center" class = "fontes">Pending Request...</span>
@@ -231,7 +231,7 @@
 
 
     <div class="container bg-light border rounded " style="height: 100%; width: 60rem; float:left;">
-      <h3 class="fw-bold border-bottom main-title mt-3 text-center">My services requested</h3>
+      <h3 class="fw-bold border-bottom main-title mt-3 text-center">My services requests</h3>
       <table class="table align-middle mt-3 bg-white main-title">
         <thead class="table-header text-light">
           <tr>
