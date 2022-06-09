@@ -1,35 +1,74 @@
-html {
-    scroll-behavior: smooth;
-   }
-   
-   .textabout {
-    text-decoration: none;
-    background-color: #7E2BB6;
-    color: rgb(255, 255, 255);
-    font-size:larger;
-    padding-top: 5px;
-    padding-right: 15px;
-    padding-bottom: 5px;
-    padding-left: 15px;
-    border-radius: 14px;
-   } 
-   
-   .textabout:hover {
-    text-decoration: none;
-    background-color: #ffffff;
-    color: #7E2BB6;
-    font-size:larger;
-    padding-top: 5px;
-    padding-right: 15px;
-    padding-bottom: 5px;
-    padding-left: 15px;
-    border-radius: 14px;
-   } 
-   
-   #down {
-    margin-top: 10%;
+// INFO ICON
+*{
+    box-sizing:border-box;
+  }
+ 
+  .cardinfo{
+    position:absolute;
     
-   } 
+    padding:42px 32px;
+    
+    clip-path: circle(1% at 50% 8%);
+    transition: all ease-in-out .3s;
+    background-color:white;
+    
+    &__infoicon{
+      position:absolute;
+      top:5px;
+      right:50%;
+      font-size:1.4em;
+      color:#000000;
+      transition:ease-out .3s;
+    }
+    &__title{
+      margin:0;
+      
+      font-size: 3em;
+      line-height:1.8;
+    }
+    &__description{
+      margin:0;
+      
+      font-size: 1.1em;
+      line-height:1.6;
+    }
+    &__credits{
+      margin:0;
+      padding: 4px 0;
+      
+      font-size: 1.1em;
+    }
+    &__reference{
+      display:inline-block;
+      
+      border-bottom: 1px solid transparent;
+      color:#0099ff;
+      text-decoration:none;
+      transition: ease-in .3s;
+      &:hover{
+         border-bottom-color: #0099ff;
+      }
+    }
+    
+    &:hover, &:focus{
+      clip-path: circle(10%);
+      border-radius:1px;
+      box-shadow: 0px 3px 9px rgba(0,0,0,0.12),
+                  0px 3px 18px rgba(0,0,0,0.08);
+      background:#ffffff;
+      
+      outline:none;
+      .card__infoicon{
+        opacity: 0;
+      }
+    }
+    &:focus{
+      box-shadow: 0px 3px 9px rgba(0,0,0,0.12), 
+                  0px 3px 18px rgba(0,0,0,0.08), 
+                  0px 0px 0px 4px rgba(0,0,0,0.2);
+    }
+  }
+
 
 
    // cards aboutus

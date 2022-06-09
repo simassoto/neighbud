@@ -1,46 +1,39 @@
 
 
 <div id="container" class="d-flex justify-content-center align-middle banner-container-home mb-4">
-
-
-
-
-
   <div class="main-title d-flex justify-content-center">
-
-
     <div class="col-12 row justify-content-center align-middle">
-                <img src="https://res.cloudinary.com/student-le-wagon/image/upload/v1654708356/Neighbud%20images/wallpaper-Recovered-Recovered_lzkncs.png" style=" max-width: 400px; max-height: 400px; width: auto; height: auto; position: absolute; margin-top: -1.25rem; margin-right: -60rem;">
+
+
+
+
+        <div class="cardinfo" tabindex="0">
+          <span class="cardinfo__infoicon">
+            <i class="fa fa-info"></i>
+          </span>
+          <h1 class="cardinfo__title">This is a title</h1>
+          <p class="cardinfo__description">Lorem ipsum dolor sit amet and this is all the lorem ipsum text I remember</p>
+          
+          <p class="cardinfo__credits">Thanks <a class="cardinfo__reference" href="https://www.youtube.com/channel/UCVyRiMvfUNMA1UPlDPzG5Ow">Gary Simon</a> for the inspiration</p>
+        </div>             
+
+
+
+
+       <!--   <img src="https://res.cloudinary.com/student-le-wagon/image/upload/v1654708356/Neighbud%20images/wallpaper-Recovered-Recovered_lzkncs.png" style=" max-width: 400px; max-height: 400px; width: auto; height: auto; position: absolute; margin-top: -1.25rem; margin-right: -60rem;">
+      -->
+
 
       <div class="col-12 d-flex justify-content-center text-centerd-block" style="align-items: end">
-
         <div style="margin-left: 0rem;"><h1 class = "fontes">Find a neighbor. Find a service.</h1></div>
-
-
-
       </div>
-
-
-
-
         <div class= "">
           <%= simple_form_for :search, url: services_path, method: :get do |f| %>
-
-          <div class="search-form-control fontes d-flex">
-            <%= text_field_tag :query, params[:query], class: "form-control string required" %>
-            <button name="button" type="submit" class="btn-secondary btn-sm table-header buttonmove">
-            <i class="fas fa-search"></i> Search
-            </button>
-
+          <div class="search-box fontes mx-auto">
+            <button name="button" type="submit" class="btn-search"><i class="fas fa-search"></i></button>
+            <%= text_field_tag :query, params[:query], class: "input-search string required", placeholder: "Type to search..." %>
           </div>
-        <% end %>
-
-          <div class="col-12 d-flex justify-content-center mt-5" style="align-items: end; text-align: center;">
-
-            <h5 class="fontes" > Register now and earn $NB 50 to start purchasing services from your neighbors.</h5>
-
-          </div>
-
+          <% end %>
       </div>
     </div>
   </div>
@@ -123,7 +116,7 @@
 
 <!-- How it Works -->
 
-  <h1 class="about-title display-3 d-flex justify-content-center align-middle" style="margin-top: 130px;">How it works</h1>
+  <h1 class="about-title display-3 d-flex justify-content-center align-middle" style="margin-top: 50px;">How it works</h1>
   <div id="down" class="container d-flex justify-content-center align-middle mt-5">
 
 
