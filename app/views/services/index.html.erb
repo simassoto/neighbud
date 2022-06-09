@@ -46,10 +46,12 @@
 
               <!-- BEGIN SEARCH INPUT -->
 
-              <div class="input-group mb-3">
-                <input type="text" class="form-control" style="border-radius: 5px;" value="" placeholder="Search">
-                  <button class="btn-primary ms-1" style="width: 50px; border-radius: 5px; background-color: #7e2bb6; border-color: #7e2bb6;" type="button"><i class="text-light fa fa-search"></i></button>
-              </div>
+                <%= simple_form_for :search, url: services_path, method: :get do |f| %>
+                  <div class="input-group mb-3">
+                    <%= text_field_tag :query, params[:query], style: "border-radius: 5px;", class: "form-control", placeholder: "Search" %>
+                    <button class="btn-primary ms-1" style="width: 50px; border-radius: 5px; background-color: #7e2bb6; border-color: #7e2bb6;" type="submit"><i class="text-light fa fa-search"></i></button>
+                  </div>
+                <% end %>
 
               <!-- MAP -->
 
