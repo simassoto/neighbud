@@ -61,32 +61,29 @@
 
               <!-- MAP -->
 
-              <!-- END SEARCH INPUT -->
-              <h5><strong>Results</strong></h5>
-
                 <!-- END ORDER RESULT -->
 
-                <!-- BEGIN TABLE RESULT -->
-                          <div class="container table-responsive">
-                              <ul class="responsive-table">
-                                <li class="table-header">
-                                  <div class="col col-1">Category</div>
-                                  <div class="col col-2">Title</div>
-                                  <div class="col col-3">Price</div>
-                                </li>
+            <!-- BEGIN TABLE RESULT -->
+              <div class="table-responsive">
+                  <ul class="responsive-table">
+                    <li class="table-header">
+                      <div class="col col-1">Category</div>
+                      <div class="col col-2">Title</div>
+                      <div class="col col-3">Price</div>
+                    </li>
 
-                                <% @services.each do |service| %>
-                                  <%= link_to service_path(service) do %>
-                                    <li class="table-row d-flex">
-                                      <div class="image col col-1"><img src="assets/<%= service.category %>.png" alt=""></div>
-                                      <div class="col col-2 product"><strong><%= service.title %></strong><br><%= service.description %></div>
-                                      <div class="col col-3 fs-6 text-center" data-label="Amount">$NB <%= service.price %></div>
-                                    </li>
-                                  <% end %>
-                                <% end %>
-                              </ul>
-                          </div>
-              <!-- END TABLE RESULT -->
+                    <% @services.each do |service| %>
+                      <%= link_to service_path(service) do %>
+                        <li class="table-row d-flex">
+                          <div class="image col col-1"><img src="assets/<%= service.category %>.png" alt=""></div>
+                          <div class="col col-2 product"><strong><%= service.title %></strong><br><%= service.description %></div>
+                          <div class="col col-3 fs-6 text-center cor" data-label="Amount">$NB <%= service.price %></div>
+                        </li>
+                      <% end %>
+                    <% end %>
+                  </ul>
+              </div>
+          <!-- END TABLE RESULT -->
 
               <!-- BEGIN PAGINATION -->
               <div class="container">

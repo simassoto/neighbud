@@ -1,46 +1,21 @@
-
-
 <div id="container" class="d-flex justify-content-center align-middle banner-container-home mb-4">
-
-
-
-
-
   <div class="main-title d-flex justify-content-center">
-
-
     <div class="col-12 row justify-content-center align-middle">
-                <img src="https://res.cloudinary.com/student-le-wagon/image/upload/v1654708356/Neighbud%20images/wallpaper-Recovered-Recovered_lzkncs.png" style=" max-width: 400px; max-height: 400px; width: auto; height: auto; position: absolute; margin-top: -1.25rem; margin-right: -60rem;">
+
+       <img src="https://res.cloudinary.com/student-le-wagon/image/upload/v1654773792/Neighbud%20images/wallpaper-Recovered-Recovered_cs6z9i.png" style=" max-width: 400px; max-height: 400px; width: auto; height: auto; position: absolute; margin-top: -1.25rem; margin-right: -60rem;">
+      
+
 
       <div class="col-12 d-flex justify-content-center text-centerd-block" style="align-items: end">
-
         <div style="margin-left: 0rem;"><h1 class = "fontes">Find a neighbor. Find a service.</h1></div>
-
-
-
       </div>
-
-
-
-
         <div class= "">
           <%= simple_form_for :search, url: services_path, method: :get do |f| %>
-
-          <div class="search-form-control fontes d-flex">
-            <%= text_field_tag :query, params[:query], class: "form-control string required" %>
-            <button name="button" type="submit" class="btn-secondary btn-sm table-header buttonmove">
-            <i class="fas fa-search"></i> Search
-            </button>
-
+          <div class="search-box fontes mx-auto">
+            <button name="button" type="submit" class="btn-search"><i class="fas fa-search"></i></button>
+            <%= text_field_tag :query, params[:query], class: "input-search string required", placeholder: "Type to search..." %>
           </div>
-        <% end %>
-
-          <div class="col-12 d-flex justify-content-center mt-5" style="align-items: end; text-align: center;">
-
-            <h5 class="fontes" > Register now and earn $NB 50 to start purchasing services from your neighbors.</h5>
-
-          </div>
-
+          <% end %>
       </div>
     </div>
   </div>
@@ -55,10 +30,10 @@
     </div>
   <% end %>
 
-  <%= link_to services_path(query: "sport"), :controller => "services" do %>
+  <%= link_to services_path(query: "sports"), :controller => "services" do %>
     <div class="d-flex card-category-homepage text-center flex-column justify-content-center align-items-center grow">
       <i class="fa-solid fa-volleyball card-icon2"></i>
-      <span class="text-middle2 text-center">Sport</span>
+      <span class="text-middle2 text-center">Sports</span>
     </div>
   <% end %>
 
@@ -128,7 +103,7 @@
 
 
 
-    <div class="container mb-2 border-top border-bottom">
+    <div class="container mb-2 border-bottom">
 
 
 
@@ -147,8 +122,8 @@
                           style="width: 200px; height: 200px, position: absolute;"
                           class="rounded-circle align-items-center"
                         />
-                        <h6 class="main-title fontes ">Log in</h6>
-                        <p class="main-title fontes ">and start using the application</p>
+                        <h4 class="main-title fontes ">Log in</h4>
+                        <h6 class="main-title fontes ">and start using the application</h6>
 
                       </div>
 
@@ -162,8 +137,8 @@
                           class="rounded-circle align-items-center"
                         />
 
-                        <h6 class="main-title fontes ">Choose the service</h6>
-                        <p class="main-title fontes ">set the filters and choose a service from a neighbor</p>
+                        <h4 class="main-title fontes ">Choose the service</h4>
+                        <h6 class="main-title fontes ">set the filters and choose a service from a neighbor</h6>
 
                       </div>
 
@@ -177,9 +152,9 @@
                           style="width: 212px; height: 212px, position: absolute;"
                           class="rounded-circle align-items-center"
                         />
-                        <h6 class="main-title ">Book the service</h6>
+                        <h4 class="main-title ">Book the service</h4>
 
-                        <p class="main-title ">and wait for confirmation from the other user</p>
+                        <h6 class="main-title ">and wait for confirmation from the other user</h6>
 
                       </div>
 
@@ -192,9 +167,9 @@
                           style="width: 200px; height: 200px, position: absolute;"
                           class="rounded-circle align-items-center"
                         />
-                        <h6 class="main-title ">Do the Job</h6>
+                        <h4 class="main-title ">Do the Job</h4>
 
-                        <p class="main-title ">do the service on the day and time scheduled between the users</p>
+                        <h6 class="main-title ">do the service on the day and time scheduled between the users</h6>
 
                       </div>
 
@@ -207,9 +182,9 @@
                           style="width: 220px; height: 220px, position: absolute;"
                           class="rounded-circle align-items-center"
                         />
-                        <h6 class="main-title ">Pay your Neighbud</h6>
+                        <h4 class="main-title ">Pay your Neighbud</h4>
 
-                        <p class="main-title ">After the work is done, confirm the credit transfer on your dashboard</p>
+                        <h6 class="main-title ">After the work is done, confirm the credit transfer on your dashboard</h6>
 
                       </div>
 
