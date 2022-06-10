@@ -1,0 +1,5 @@
+meta_product_name: "Neighbud"
+meta_title: "Neighbud - Find a neighbor. Find a service."
+meta_description: "Plataform to exchange services with your neighbors"
+meta_image: "cover.png" # should exist in `app/assets/images/`
+twitter_account: "@product_twitter_account"   # required for Twitter Cards
